@@ -5,11 +5,11 @@
     <div class="absolute inset-0 w-full h-32 bg-[#F2F3FA] z-0">
 
     </div>
-    <div class="container flex  justify-between bg-transparent w-full py-20 relative z-20" >
-        <div class="flex flex-col justify-between md:w-[762px]">
+    <div class="container flex  justify-between bg-transparent md:flex-nowrap flex-wrap w-full py-20 relative z-20" >
+        <div class="flex flex-col gap-3 justify-between md:w-[762px]">
             <div>
-                <h3 class="text-xl leading-[30px] font-normal text-secondary-800">{{__("advantage.title")}}</h3>
-                <h1 class="text-[30px] leading-[45px] font-semibold text-dark-800">{{__("advantage.subtitle")}}</h1>
+                <h3 class="text-lg md:text-xl md:leading-[30px] font-normal text-secondary-800">{{__("advantage.title")}}</h3>
+                <h1 class="text-xl md:text-[30px] md:leading-[45px] font-semibold text-dark-800">{{__("advantage.subtitle")}}</h1>
             </div>
             <ul class="flex flex-col gap-3">
                 @for ($i=1;$i<=6;$i++)
@@ -17,15 +17,15 @@
                     <li>
                         <div class="flex gap-2 items-center">
                             <div class="w-3 h-[15px] bg-primary-800"></div>
-                            <h4 class="text-2xl leading-[43px] text-primary-800 font-semibold">{{__("advantage.Adv$i.title")}}</h4>
+                            <h4 class="text-xl md:text-2xl md:leading-[43px] text-primary-800 font-semibold">{{__("advantage.Adv$i.title")}}</h4>
                         </div>
-                        <p class="text-xl leading-[36px] text-[#525459] font-semibold">{{__("advantage.Adv$i.details")}}</p>
+                        <p class="text-lg md:text-xl md:leading-[36px] text-[#525459] font-semibold">{{__("advantage.Adv$i.details")}}</p>
                     </li>
                     
                 @endfor
             </ul>
 
-            <a href="#contact" class="block w-[293px] text-center  py-3  z-10  rounded-[25px]   font-bold text-lg  text-white bg-secondary-800">
+            <a href="#contact" class="block md:w-[293px] w-full text-center  py-3  z-10  rounded-[25px]   font-bold text-lg  text-white bg-secondary-800">
                 {{__("front.actions.order")}}
             </a>
             

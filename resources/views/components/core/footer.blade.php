@@ -10,11 +10,11 @@
             <!-- First row with 3 columns -->
             <div class="lg:col-start-1 lg:col-end-1 md:flex md:flex-col ">
                 <a href="{{ route('index') }}" class="self-start">
-                    <img src="{{asset("assets/img/home/footer/logo.svg")}}"
+                    <img src="{{asset("assets/img/home/footer/logo.png")}}"
                         class="object-contain w-[192px] h-[59px] logo " alt="{{ __('front.title') }}" />
                 </a>
                 <p class="self-start mt-[28px] md:w-[325px] mb-6 text-base  leading-[27px] font-normal text-white">
-                    {{ __('front.home.footer.description') }}
+                    {{ __('front.description') }}
                 </p>
 
                 <div class="relative z-10 flex items-center justify-start gap-8 social">

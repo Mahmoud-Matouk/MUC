@@ -6,7 +6,7 @@
 
 <!-- <nav x-data="{ showNav: false }" class="fixed top-0 left-0 z-50 w-full py-12 bg-transparent bg-primary-100" id="nav"> -->
 <nav x-data="{ showNav: false }" class="sticky top-0 left-0 z-50 w-full h-[80px] container bg-transparent pt-2" id="nav">
-    <div class=" flex items-center content-center md:justify-between justify-between ">
+    <div class=" flex items-center content-center md:justify-between justify-center gap-4 ">
         {{-- hidden hamburger button--}}
         <div class="px-2 cursor-pointer hamburger bg-secondary-800 rounded-xl" @click="showNav = !showNav"
             :class="[showNav ? 'active' : '']">
