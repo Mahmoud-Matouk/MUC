@@ -82,14 +82,7 @@ module.exports = {
                 'Jakarta': ['"Plus Jakarta Sans"','sans-serif'],
             },
             backgroundImage: {
-                'cubebg':"url('/public/assets/img/background.svg')",
-                'cubebg2':"url('/public/assets/img/background2.svg')",
-                'cubebg3':"url('/public/assets/img//home/add2/background.svg')",
-                'vec':"url('/public/assets/img/home/solutions/Vector1.svg')",
-                'cursor':'url("/public/assets/img/home/intro/word_bg.svg")',
-                'footerBack':'url("/public/assets/img/home/footer/background.png")',
-                'strengthBack':'url("/public/assets/img/home/strength/background.svg")',
-                'clientsBack':'url("/public/assets/img/home/clients/background.png")',
+                'who-back':"url('/public/assets/img/home/who/rec.svg')",
               },
             content:{
                 'word':'url("/public/assets/img/home/intro/word_bg.svg")',

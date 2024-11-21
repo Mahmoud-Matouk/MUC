@@ -8,19 +8,17 @@
 
 --}}
 <x-layouts.app>
-    <div class="bg-transparent h-full  w-full relative ">
-         <div class="absolute inset-0 z-0 opacity-5">
+    <div class="bg-[#F2F3FA] h-full  w-full relative ">
+         <div class="absolute inset-0 -z-10 opacity-[3%]">
             <img src="{{asset("assets/img/background.svg")}}" alt="background">
          </div>
         <x-core.header />
         <x-home.intro />
     </div>
-    <x-home.solutions />
-    <x-home.strength />
-    <x-home.clients />
-    <x-home.numbers />
-    <x-home.services />
-    <x-home.work />
-    <x-home.add2 />
+    <x-home.who/>
+    <x-home.advantages/>
+    <x-home.services/>
+    <x-home.products/>
+    <x-core.footer />
 
 </x-layouts.app>
