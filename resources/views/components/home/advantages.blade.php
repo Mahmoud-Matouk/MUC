@@ -2,6 +2,9 @@
     <div class="absolute w-[3013.42px] h-[1377.31px] -top-[220px]  z-10">
         <img class="relative " src="{{asset("assets/img/home/Advantage/back.svg")}}" alt="background">
     </div>
+    <div class="absolute inset-0 w-full h-32 bg-[#F2F3FA] z-0">
+
+    </div>
     <div class="container flex  justify-between bg-transparent w-full py-20 relative z-20" >
         <div class="flex flex-col justify-between md:w-[762px]">
             <div>
