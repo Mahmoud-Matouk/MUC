@@ -103,22 +103,27 @@ class ViewLead extends ViewRecord
                             'class' => 'h-full',
                         ])
                         ->schema([
-                            ImageEntry::make('agent.avatar')
-                                ->hiddenLabel()
-                                ->circular()
-                                ->size(66)
-                                ->defaultImageUrl(fn (Lead $record) => $record->agent?->name ? url('/app/avatars/0.svg') : url('/app/fallback/anonymous.png')),
+                            // ImageEntry::make('agent.avatar')
+                            //     ->hiddenLabel()
+                            //     ->circular()
+                            //     ->size(66)
+                            //     ->defaultImageUrl(fn (Lead $record) => $record->agent?->name ? url('/app/avatars/0.svg') : url('/app/fallback/anonymous.png')),
 
-                            TextEntry::make('agent.name')
+                            // TextEntry::make('agent.name')
+                            //     ->hiddenLabel()
+                            //     ->color('primary')
+                            //     ->icon('iconsax-bro-user')
+                            //     ->size(TextEntry\TextEntrySize::Large)
+                            //     ->state(fn (Lead $record) => $record->agent?->name ?? '--')
+                            //     ->helperText(fn (Lead $record) => $record->agent?->email)
+                            //     ->extraAttributes([
+                            //         'class' => 'font-bold',
+                            //     ]),
+
+                            ImageEntry::make('image')
                                 ->hiddenLabel()
-                                ->color('primary')
-                                ->icon('iconsax-bro-user')
-                                ->size(TextEntry\TextEntrySize::Large)
-                                ->state(fn (Lead $record) => $record->agent?->name ?? '--')
-                                ->helperText(fn (Lead $record) => $record->agent?->email)
-                                ->extraAttributes([
-                                    'class' => 'font-bold',
-                                ]),
+                                // ->size(66)
+                                ,
                         ]),
                 ]),
             ]);

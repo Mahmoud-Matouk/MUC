@@ -8,7 +8,7 @@
 
 --}}
 <x-layouts.app>
-    <div class="bg-transparent h-full  w-full relative ">
+    <div class="relative w-full h-full bg-transparent ">
          <div class="absolute inset-0 z-0 opacity-5">
             <img src="{{asset("assets/img/background.svg")}}" alt="background">
          </div>
@@ -22,5 +22,6 @@
     <x-home.services />
     <x-home.work />
     <x-home.add2 />
+    <x-home.contact />
 
 </x-layouts.app>
