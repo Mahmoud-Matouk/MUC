@@ -1,4 +1,4 @@
-<div class="bg-white w-full py-24 pb-10 relative z-30">
+<div class="bg-white w-full py-24 pb-10 relative z-30" id="products">
     <div class="w-full container flex flex-col justify-between">
         <div class="space-y-2 mx-auto md:w-[561px] text-center">
             <h3 class="text-lg md:text-xl md:leading-[30px] font-normal text-secondary-800">{{__("products.head")}}</h3>
@@ -16,7 +16,7 @@
             
             @endfor
         </div>
-        <a href="#contact" class="self-center py-3 px-[31px] z-10 overflow-hidden rounded-[25px] w-[293px] text-center  font-bold text-lg  text-white
+        <a href="#contact" class="self-center py-3 px-[31px] z-10 overflow-hidden rounded-[25px] w-[293px] text-center  font-bold text-sm  text-white
             bg-secondary-800">
             {{__("front.actions.order")}}
         </a>

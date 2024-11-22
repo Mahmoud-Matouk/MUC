@@ -25,7 +25,7 @@
                 @endfor
             </ul>
 
-            <a href="#contact" class="block md:w-[293px] w-full text-center  py-3  z-10  rounded-[25px]   font-bold text-lg  text-white bg-secondary-800">
+            <a href="#contact" class="block md:w-[293px] w-full text-center  py-3  z-10  rounded-[25px]   font-bold text-sm  text-white bg-secondary-800">
                 {{__("front.actions.order")}}
             </a>
             

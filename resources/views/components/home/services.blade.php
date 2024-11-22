@@ -1,4 +1,4 @@
-<div class="bg-[#F2F3FA] w-full pt-24 relative z-30">
+<div class="bg-[#F2F3FA] w-full pt-24 relative z-30" id="services">
     <div class="w-full container  ">
         <div class="space-y-2 ">
             <h3 class="text-lg md:text-xl md:leading-[30px] font-normal text-secondary-800">{{__("services.head")}}</h3>

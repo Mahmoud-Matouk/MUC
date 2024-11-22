@@ -2,7 +2,7 @@
     $links = ['index','advantages','who', 'services', 'products','contact','terms'];
 @endphp
 
-<footer class="w-full h-full relative pt-10  bg-[#162052] border-b-[1px] border-white">
+<footer class="w-full h-full relative pt-10  bg-[#162052] border-b-[1px] border-white ">
     
     <div class="px-4 md:pr-[119px] md:pl-[71px]  bg-transparent">
         <div
@@ -20,17 +20,17 @@
                 <div class="relative z-10 flex items-center justify-start gap-8 social">
 
                     <a href="{{ Config::get('site.social.facebook') }}" target="_blank">
-                        <img src="{{ asset('assets/img/home/footer/facebook.svg') }}" alt="facebook icon"
+                        <img src="{{ asset('assets/img/home/footer/facebook.pnf') }}" alt="facebook icon"
                             class="w-[35px] h-[35px]" />
                     </a>
 
                     <a href="{{ Config::get('site.social.youtube') }}" target="_blank">
-                        <img src="{{ asset('assets/img/home/footer/youtube.svg') }}" alt="youtube icon"
+                        <img src="{{ asset('assets/img/home/footer/youtube.png') }}" alt="youtube icon"
                             class="w-[35px] h-[35px]" />
                     </a>
 
                     <a href="{{ Config::get('site.social.x') }}" target="_blank">
-                        <img src="{{ asset('assets/img/home/footer/twitter.svg') }}" alt="twitter icon"
+                        <img src="{{ asset('assets/img/home/footer/x.png') }}" alt="twitter icon"
                             class="w-[35px] h-[35px]" />
                     </a>
                 </div>

@@ -60,7 +60,7 @@
             </div>
             
             <a href="#contact"
-            class="py-3 px-[31px] z-10 overflow-hidden rounded-[25px]  font-bold text-lg justify-center items-center text-white
+            class="py-3 px-[31px] z-10 overflow-hidden rounded-[25px]  font-bold text-sm justify-center items-center text-white
               bg-secondary-800
             ">
             {{__("front.actions.call")}}

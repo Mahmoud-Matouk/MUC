@@ -80,6 +80,8 @@ module.exports = {
         extend: {
             fontFamily: {
                 'Jakarta': ['"Plus Jakarta Sans"','sans-serif'],
+                // 'Loew ': ['"Loew"','sans-serif'],
+
             },
             backgroundImage: {
                 'who-back':"url('/public/assets/img/home/who/rec.svg')",
