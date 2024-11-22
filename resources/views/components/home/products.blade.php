@@ -1,8 +1,8 @@
 <div class="bg-white w-full py-24 pb-10 relative z-30" id="products">
     <div class="w-full container flex flex-col justify-between">
-        <div class="space-y-2 mx-auto md:w-[561px] text-center">
+        <div class="space-y-2 mx-auto md:w-[560px] text-center">
             <h3 class="text-lg md:text-xl md:leading-[30px] font-normal text-secondary-800">{{__("products.head")}}</h3>
-            <h1 class="text-xl text-[30px] leading-[45px] font-semibold text-dark-800 ">{{__("products.description")}}</h1>
+            <h1 class="text-xl md:text-[30px] md:leading-[45px]  font-semibold text-dark-800 ">{{__("products.description")}}</h1>
         </div>
 
         <div class=" w-full grid grid-cols-1 md:grid-cols-3  py-6  gap-4  md:pt-[84px]">

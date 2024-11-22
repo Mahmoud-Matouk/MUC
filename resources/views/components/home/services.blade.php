@@ -2,7 +2,7 @@
     <div class="w-full container  ">
         <div class="space-y-2 ">
             <h3 class="text-lg md:text-xl md:leading-[30px] font-normal text-secondary-800">{{__("services.head")}}</h3>
-            <h1 class="text-xl md:text-[30px] md:leading-[45px] font-semibold text-dark-800">{{__("services.description")}}</h1>
+            <h1 class="text-xl md:text-[30px] md:leading-[45px] md:w-[90%] font-semibold text-dark-800">{{__("services.description")}}</h1>
         </div>
 
         <div class=" w-full grid grid-cols-1 md:grid-cols-4  py-6  gap-4  md:py-12">

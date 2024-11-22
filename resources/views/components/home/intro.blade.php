@@ -8,7 +8,7 @@
                     {{__("front.home.intro.captions.caption1")}}</h2>
 
             </div>
-            <p class="text-base  md:text-lg md:leading-[32px] font-normal text-dark-500 md:w-[500px]">
+            <p class="mt-4 text-base  md:text-lg md:leading-[32px] font-normal text-dark-500 md:w-[500px]">
                 {{__("front.home.intro.captions.caption2")}}</p>
             <a href="#contact" class="py-3 px-[31px] z-10 overflow-hidden rounded-[25px] self-start  font-bold text-sm md:text-lg justify-center items-center text-white
             bg-secondary-800
@@ -19,7 +19,7 @@
         </div>
         <div class="absolute top-0 left-0 z-10 w-full h-full md:opacity-100 opacity-20">
 
-            <img class="relative  md:w-[655px] h-full mr-auto "
+            <img class="relative  md:w-[600px] h-full mr-auto "
                 src="{{asset("assets/img/home/intro/image.png")}}" alt="image">
         </div>
     </div>
