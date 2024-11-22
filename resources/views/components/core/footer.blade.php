@@ -20,7 +20,7 @@
                 <div class="relative z-10 flex items-center justify-start gap-8 social">
 
                     <a href="{{ Config::get('site.social.facebook') }}" target="_blank">
-                        <img src="{{ asset('assets/img/home/footer/facebook.pnf') }}" alt="facebook icon"
+                        <img src="{{ asset('assets/img/home/footer/facebook.png') }}" alt="facebook icon"
                             class="w-[35px] h-[35px]" />
                     </a>
 
