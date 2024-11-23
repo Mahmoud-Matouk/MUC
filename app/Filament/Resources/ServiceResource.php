@@ -24,7 +24,7 @@ class ServiceResource extends Resource
 
     public static function getNavigationBadge(): ?string
     {
-        return Service::count();
+        return Service::where('active', true)->count();
     }
 
     public static function getNavigationBadgeColor(): string|array|null

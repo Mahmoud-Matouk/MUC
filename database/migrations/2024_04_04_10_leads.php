@@ -17,9 +17,11 @@ return new class extends Migration
             $table->foreignId(column: 'category_id')->nullable()->constrained(table: 'categories')->nullOnDelete();
 
             $table->string(column: 'name')->index();
-            $table->string(column: 'mobile_code');
+            // $table->string(column: 'mobile_code');
             $table->string(column: 'mobile');
-            $table->text(column: 'note')->nullable();
+            $table->string(column: 'city');
+            $table->text(column: 'message')->nullable();
+            $table->string(column: 'image')->nullable();
 
             $table->foreignUlid(column: 'agent_id')->nullable()->constrained(table: 'users')->nullOnDelete();
             $table->foreignUlid(column: 'creator_id')->nullable()->constrained(table: 'users')->nullOnDelete();

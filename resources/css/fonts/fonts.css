@@ -1,40 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Ruge+Boogie&display=swap');
 @font-face {
-    font-family: "bein";
-    src: url("./bein-normal.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "bein";
-    src: url("./bein-black.woff2") format("woff2");
+    font-family: "Loew";
+    src: url("./ArbFONTS-Loew-Next-Arabic-Bold.woff2") format("woff2");
     font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "AirArabia";
-    src: url("./ArbFONTS-air-arabia-1.woff2") format("woff2");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "AirArabia";
-    src: url("./ArbFONTS-air-arabia-2.woff2") format("woff2");
-    font-weight: light;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: "Loew";
-    src: url("./ArbFONTS-Loew-Next-Arabic-Bold.woff2") format("woff2");
-    font-weight: bold;
+    src: url("./ArbFONTS-Loew-Next-Arabic-Medium.woff2") format("woff2");
+    font-weight: medium;
     font-style: normal;
     font-display: swap;
 }
@@ -47,11 +22,26 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Alexandria";
+    src: url("./Alexandria-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Alexandria";
+    src: url("./Alexandria-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
 
 html,
 body {
     font-family: "Alexandria", sans-serif !important;
 }
-footer{
+footer {
     font-family: "Loew", sans-serif !important;
 }

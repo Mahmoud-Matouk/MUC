@@ -19,6 +19,6 @@
     <x-home.advantages/>
     <x-home.services/>
     <x-home.products/>
+    <x-home.contact />
     <x-core.footer />
-
 </x-layouts.app>
