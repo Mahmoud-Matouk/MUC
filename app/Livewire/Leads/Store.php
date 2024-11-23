@@ -8,6 +8,7 @@ use App\Models\Service;
 use Livewire\Component;
 use App\Models\Category;
 use Filament\Forms\Form;
+use Livewire\WithFileUploads;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Actions;
 use Filament\Forms\Components\Section;
@@ -23,6 +24,7 @@ use Marvinosswald\FilamentInputSelectAffix\TextInputSelectAffix;
 class Store extends Component implements HasForms
 {
     use InteractsWithForms;
+    use WithFileUploads;
 
     public ?string $name;
     public ?string $mobile;
@@ -77,21 +79,21 @@ class Store extends Component implements HasForms
                                 'insideRiyadh' => __('app.input.inside_riyadh'),
                                 'outsideRiyadh' => __('app.input.outside_riyadh'),
                             ])
-                            // ->required()
-                            ,
+                        // ->required()
+                        ,
 
                         Select::make('service_id')
                             ->label(__('app.input.service'))
                             ->placeholder(__('app.input.service'))
                             ->options(Service::where('active', true)->pluck('name', 'id'))
-                            // ->required()
-                            ,
+                        // ->required()
+                        ,
 
                         FileUpload::make('image')
                             ->label(__('app.input.image'))
                             ->image()
-                            // ->required()
-                            ,
+                        // ->required()
+                        ,
 
                         // TextInput::make('image')
                         //     ->label(__('app.input.image'))
@@ -104,12 +106,12 @@ class Store extends Component implements HasForms
                             ->rows(5),
                     ]),
 
-                    Actions::make([
-                        Action::make('submit')
-                            ->label(__('app.submit'))
-                            ->submit('create')
-                            ->color('gray'),
-                    ]),
+                Actions::make([
+                    Action::make('submit')
+                        ->label(__('app.submit'))
+                        ->submit('create')
+                        ->color('gray'),
+                ]),
             ]);
     }
 
@@ -119,7 +121,8 @@ class Store extends Component implements HasForms
         //     'image' => 'required|image|mimes:jpg,jpeg,png|max:2048',
         // ]);
 
-        dd($this->form->getState());
+        // dd($this->form->getState());
+        // dd($this->image);
 
         Lead::create([
             'name' => $this->name,
