@@ -1,6 +1,6 @@
 <div class="container bg-[#F2F3FA] w-full pt-16 pb-16 md:pt-28 md:pb-20">
     <div class=" flex   bg-transparent items-center  relative pb-10">
-        <div class="relative z-20 flex flex-col gap-2 w-full mx-4 md:w-[600] ">
+        <div class="relative z-20 flex flex-col gap-2 w-full  md:w-[600] ">
             <div class="flex flex-col gap-4">
                 <h2 class="text-2xl  md:text-[70px] md:leading-[105px] font-semibold text-primary-800">
                     {{__("front.home.intro.head")}}</h2>
