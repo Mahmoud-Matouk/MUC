@@ -39,7 +39,7 @@
 
             <div class="lg:col-start-2 lg:col-end-2 md:flex md:flex-col  md:mr-6 pt-10 ">
 
-                <h2 class="mb-4 text-[22px] leading-[34px] font-bold tracking-[1.5px] text-white ">
+                <h2 class="mb-3 text-[22px] leading-[34px] font-bold tracking-[1.5px] text-white ">
                     {{ __('front.home.footer.heads.head_1') }}
                 </h2>
                 <ul class=" data space-y-1  text-white columns-2">
@@ -65,7 +65,7 @@
 
             </div>
             <div class="lg:col-start-3 lg:col-end-4 md:flex md:flex-col pt-10 ">
-                <h2 class="mb-4 text-[22px] leading-[34px] font-bold tracking-[1.5px] text-white ">
+                <h2 class="mb-3 text-[22px] leading-[34px] font-bold tracking-[1.5px] text-white ">
                     {{ __('front.home.footer.heads.head_2') }}
                 </h2>
                 
