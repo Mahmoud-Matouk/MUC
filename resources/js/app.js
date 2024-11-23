@@ -1,14 +1,11 @@
 import Swiper from "swiper/bundle";
 import "swiper/swiper-bundle.css";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-
-
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 
 // ..
 AOS.init();
 window.Swiper = Swiper;
-
 
 window.addEventListener("scroll", () => initNavbar());
 
@@ -51,9 +48,9 @@ const swiper = new Swiper(".swiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    pagination:{
-        el:".swiper-pagination",
-    }
+    pagination: {
+        el: ".swiper-pagination",
+    },
 });
 const swiper_icons = new Swiper(".swiper-icons", {
     loop: true,
@@ -78,7 +75,7 @@ const swiper_icons = new Swiper(".swiper-icons", {
             slidesPerView: 4,
             spaceBetween: 16,
         },
-    }
+    },
 });
 const swiper3 = new Swiper(".swiper3", {
     loop: true,
@@ -210,9 +207,6 @@ window.joinTeachers = function () {
     window.open(link, `_blank`);
 };
 
-
-
-
 // gsap.from("#progress2", {
 // scrollTrigger: {
 //     trigger: "#progress2",
@@ -225,198 +219,189 @@ window.joinTeachers = function () {
 
 // },
 // scaleY: 0,
-// transformOrigin: "top center", 
+// transformOrigin: "top center",
 // ease: "none"
 // });
 
+// import { gsap } from "gsap";
 
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import gasp from "gasp";
+// gsap.registerPlugin(ScrollTrigger);
 
-import { gsap } from "gsap";
-    
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import gasp from "gasp";
-gsap.registerPlugin(ScrollTrigger);
+// var tl = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: ".progress-S1",
+//       scrub: true,
+//       pin: false,
 
-var tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".progress-S1",
-      scrub: true,
-      pin: false,
-      
-      start:"center center",
-      end:"+=400px",
-      toggleActions: "restart pause reverse pause",
-    }
-  });
+//       start:"center center",
+//       end:"+=400px",
+//       toggleActions: "restart pause reverse pause",
+//     }
+//   });
 
-tl.from(".progress-S1", {scaleY: 0, transformOrigin: "top center", ease: "power1.inOut",duration:2}, 0)
-.to(".progress-S1",{backgroundColor:"#172e82"});
+// tl.from(".progress-S1", {scaleY: 0, transformOrigin: "top center", ease: "power1.inOut",duration:2}, 0)
+// .to(".progress-S1",{backgroundColor:"#172e82"});
 
+// var circle1 =gsap.timeline({
+//         scrollTrigger: {
+//           trigger: "#circle1",
+//           scrub: true,
+//           pin: false,
 
-var circle1 =gsap.timeline({
-        scrollTrigger: {
-          trigger: "#circle1",
-          scrub: true,
-          pin: false,
-          
-          start:"center center",
-          end:"top 20px",
-          toggleActions: "restart pause reverse pause",
-        }
-});
+//           start:"center center",
+//           end:"top 20px",
+//           toggleActions: "restart pause reverse pause",
+//         }
+// });
 
-circle1.from("#circle1",{backgroundColor:"#E2E5EE"})
-.from(".circle-text1",{color:"#172e82"})
-.to(".circle-text1",{color:"#E2E5EE"})
-.to("#circle1",{backgroundColor:"#172e82"});
+// circle1.from("#circle1",{backgroundColor:"#E2E5EE"})
+// .from(".circle-text1",{color:"#172e82"})
+// .to(".circle-text1",{color:"#E2E5EE"})
+// .to("#circle1",{backgroundColor:"#172e82"});
 
-var t2 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".progress-S2",
-      scrub: true,
-      pin: false,
-      
-      start:"center center",
-      end:"+=400px",
-      toggleActions: "restart pause reverse pause",
-    }
-  });
+// var t2 = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: ".progress-S2",
+//       scrub: true,
+//       pin: false,
 
-t2.from(".progress-S2", {scaleY: 0, transformOrigin: "top center", ease: "power1.inOut",duration:2}, 0)
-.to(".progress-S2",{backgroundColor:"#172e82"});
+//       start:"center center",
+//       end:"+=400px",
+//       toggleActions: "restart pause reverse pause",
+//     }
+//   });
 
+// t2.from(".progress-S2", {scaleY: 0, transformOrigin: "top center", ease: "power1.inOut",duration:2}, 0)
+// .to(".progress-S2",{backgroundColor:"#172e82"});
 
-var circle2 =gsap.timeline({
-        scrollTrigger: {
-          trigger: "#circle2",
-          scrub: true,
-          pin: false,
-          
-          start:"center center",
-          end:"top 20px",
-          toggleActions: "restart pause reverse pause",
-        }
-});
+// var circle2 =gsap.timeline({
+//         scrollTrigger: {
+//           trigger: "#circle2",
+//           scrub: true,
+//           pin: false,
 
-circle2.from("#circle2",{backgroundColor:"#E2E5EE"})
-.from(".circle-text2",{color:"#172e82"})
-.to(".circle-text2",{color:"#E2E5EE"})
-.to("#circle2",{backgroundColor:"#172e82"});
+//           start:"center center",
+//           end:"top 20px",
+//           toggleActions: "restart pause reverse pause",
+//         }
+// });
 
-var t3 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".progress-S3",
-      scrub: true,
-      pin: false,
-      
-      start:"center center",
-      end:"+=400px",
-      toggleActions: "restart pause reverse pause",
-    }
-  });
+// circle2.from("#circle2",{backgroundColor:"#E2E5EE"})
+// .from(".circle-text2",{color:"#172e82"})
+// .to(".circle-text2",{color:"#E2E5EE"})
+// .to("#circle2",{backgroundColor:"#172e82"});
 
-t3.from(".progress-S3", {scaleY: 0, transformOrigin: "top center", ease: "power1.inOut",duration:2}, 0)
-.to(".progress-S3",{backgroundColor:"#172e82"});
+// var t3 = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: ".progress-S3",
+//       scrub: true,
+//       pin: false,
 
+//       start:"center center",
+//       end:"+=400px",
+//       toggleActions: "restart pause reverse pause",
+//     }
+//   });
 
-var circle3 =gsap.timeline({
-        scrollTrigger: {
-          trigger: "#circle3",
-          scrub: true,
-          pin: false,
-          
-          start:"center center",
-          end:"top 20px",
-          toggleActions: "restart pause reverse pause",
-        }
-});
+// t3.from(".progress-S3", {scaleY: 0, transformOrigin: "top center", ease: "power1.inOut",duration:2}, 0)
+// .to(".progress-S3",{backgroundColor:"#172e82"});
 
-circle3.from("#circle3",{backgroundColor:"#E2E5EE"})
-.from(".circle-text3",{color:"#172e82"})
-.to(".circle-text3",{color:"#E2E5EE"})
-.to("#circle3",{backgroundColor:"#172e82"});
+// var circle3 =gsap.timeline({
+//         scrollTrigger: {
+//           trigger: "#circle3",
+//           scrub: true,
+//           pin: false,
 
+//           start:"center center",
+//           end:"top 20px",
+//           toggleActions: "restart pause reverse pause",
+//         }
+// });
 
-
+// circle3.from("#circle3",{backgroundColor:"#E2E5EE"})
+// .from(".circle-text3",{color:"#172e82"})
+// .to(".circle-text3",{color:"#E2E5EE"})
+// .to("#circle3",{backgroundColor:"#172e82"});
 
 function animateValue(obj, start, end, duration) {
     let startTimestamp = null;
     const step = (timestamp) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      obj.innerHTML = Math.floor(progress * (end - start) + start);
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      }
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        obj.innerHTML = Math.floor(progress * (end - start) + start);
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        }
     };
     window.requestAnimationFrame(step);
-  }
-  
-  
-let numbers_logic = ()=>{
-    console.log("numbers_logic start");
-    let missions_text =document.querySelector(".missions");
-    let branches_text =document.querySelector(".branches");
-    let percentage_text =document.querySelector(".percentage");
-    let towns_text =document.querySelector(".towns");
-    // let missions=1;
-    // let branches=500;
-    // let percentage=70;
-    // let towns=5;
-    // missions_text.innerText = missions;
-    // branches_text.innerText = branches;
-    // percentage_text.innerText = percentage;
-    // towns_text.innerText= towns;
-    animateValue(missions_text, 0, 74, 5000);
-    animateValue(branches_text, 0, 2500, 5000);
-    animateValue(percentage_text, 0, 99, 5000);
-    animateValue(towns_text, 0, 100, 5000);
-
-    // gsap.fromTo(".missions",{x:0},{x:5,duration:0.5});
-    // gsap.fromTo(".branches",{y:-5},{y:0,duration:0.5});
-    // gsap.fromTo(".percentage",{y:-5},{y:0,duration:0.5});
-    // gsap.fromTo(".towns",{y:-5},{y:0,duration:0.5});
-
-    // setTimeout(()=>{
-    //     missions=30;
-    //     branches=1000;
-    //     percentage=80;
-    //     towns=50;
-    //     missions_text.innerText = missions;
-    //     branches_text.innerText = branches;
-    //     percentage_text.innerText = percentage;    
-    //     towns_text.innerText = towns;
-    //     gsap.fromTo(".missions",{x:0},{x:5,duration:0.5});
-    //     gsap.fromTo(".branches",{y:-5},{y:0,duration:0.5});
-    //     gsap.fromTo(".percentage",{y:-5},{y:0,duration:0.5});
-    //     gsap.fromTo(".towns",{y:-5},{y:0,duration:0.5});
-    // },1000);
-
-    // setTimeout(()=>{
-    //     missions=74;
-    //     branches=2500;
-    //     percentage=99;
-    //     towns=100;
-    //     missions_text.innerText = missions;
-    //     branches_text.innerText = branches;
-    //     percentage_text.innerText = percentage;
-    //     towns_text.innerText = towns;
-    //     gsap.fromTo(".missions",{x:0},{x:5,duration:0.5});
-    //     gsap.fromTo(".branches",{y:-5},{y:0,duration:0.5});
-    //     gsap.fromTo(".percentage",{y:-5},{y:0,duration:0.5});
-    //     gsap.fromTo(".towns",{y:-5},{y:0,duration:0.5});
-    // },3000);
 }
 
-function triggerPos( el, buffer ){
-    return el.offset().top - el.height() + buffer;
-}
-let elTrigger = triggerPos( $('.numbers-section'), -100 );
-let triggered = false;
-$(window).scroll( function(){
-  var st = $(this).scrollTop();
-  if( !triggered && st >= elTrigger ){
-     triggered = true;
-     numbers_logic();
-   }
-})
+// let numbers_logic = () => {
+//     console.log("numbers_logic start");
+//     let missions_text = document.querySelector(".missions");
+//     let branches_text = document.querySelector(".branches");
+//     let percentage_text = document.querySelector(".percentage");
+//     let towns_text = document.querySelector(".towns");
+// let missions=1;
+// let branches=500;
+// let percentage=70;
+// let towns=5;
+// missions_text.innerText = missions;
+// branches_text.innerText = branches;
+// percentage_text.innerText = percentage;
+// towns_text.innerText= towns;
+// animateValue(missions_text, 0, 74, 5000);
+// animateValue(branches_text, 0, 2500, 5000);
+// animateValue(percentage_text, 0, 99, 5000);
+// animateValue(towns_text, 0, 100, 5000);
+
+// gsap.fromTo(".missions",{x:0},{x:5,duration:0.5});
+// gsap.fromTo(".branches",{y:-5},{y:0,duration:0.5});
+// gsap.fromTo(".percentage",{y:-5},{y:0,duration:0.5});
+// gsap.fromTo(".towns",{y:-5},{y:0,duration:0.5});
+
+// setTimeout(()=>{
+//     missions=30;
+//     branches=1000;
+//     percentage=80;
+//     towns=50;
+//     missions_text.innerText = missions;
+//     branches_text.innerText = branches;
+//     percentage_text.innerText = percentage;
+//     towns_text.innerText = towns;
+//     gsap.fromTo(".missions",{x:0},{x:5,duration:0.5});
+//     gsap.fromTo(".branches",{y:-5},{y:0,duration:0.5});
+//     gsap.fromTo(".percentage",{y:-5},{y:0,duration:0.5});
+//     gsap.fromTo(".towns",{y:-5},{y:0,duration:0.5});
+// },1000);
+
+// setTimeout(()=>{
+//     missions=74;
+//     branches=2500;
+//     percentage=99;
+//     towns=100;
+//     missions_text.innerText = missions;
+//     branches_text.innerText = branches;
+//     percentage_text.innerText = percentage;
+//     towns_text.innerText = towns;
+//     gsap.fromTo(".missions",{x:0},{x:5,duration:0.5});
+//     gsap.fromTo(".branches",{y:-5},{y:0,duration:0.5});
+//     gsap.fromTo(".percentage",{y:-5},{y:0,duration:0.5});
+//     gsap.fromTo(".towns",{y:-5},{y:0,duration:0.5});
+// },3000);
+// };
+
+// function triggerPos(el, buffer) {
+//     return el.offset().top - el.height() + buffer;
+// }
+// let elTrigger = triggerPos($(".numbers-section"), -100);
+// let triggered = false;
+// $(window).scroll(function () {
+//     var st = $(this).scrollTop();
+//     if (!triggered && st >= elTrigger) {
+//         triggered = true;
+//         numbers_logic();
+//     }
+// });

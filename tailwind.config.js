@@ -4,16 +4,16 @@ const colors = require("tailwindcss/colors");
 
 const dark = {
     50: "#FDF2F2",
-      100: "#FAE5E5",
-      200: "#F4C7C7",
-      300: "#EFAEAE",
-      400: "#EA9494",
-      500: "#777E90",
-      600: "#E05D5D",
-      700: "#DB4343",
-      800: "#141F1F",
-      900: "#6B1515",
-      950: "#330A0A"
+    100: "#FAE5E5",
+    200: "#F4C7C7",
+    300: "#EFAEAE",
+    400: "#EA9494",
+    500: "#777E90",
+    600: "#E05D5D",
+    700: "#DB4343",
+    800: "#141F1F",
+    900: "#6B1515",
+    950: "#330A0A",
 };
 
 const primary = {
@@ -27,8 +27,7 @@ const primary = {
     700: "#EB2D5A",
     800: "#E01544",
     900: "#700A22",
-    950: "#380511"
-
+    950: "#380511",
 };
 
 const secondary = {
@@ -42,14 +41,12 @@ const secondary = {
     700: "#1099EF",
     800: "#0E83CC",
     900: "#074064",
-    950: "#042235"
+    950: "#042235",
 };
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    plugins: [
-        require('tailwind-clip-path'),
-    ],
+    plugins: [require("tailwind-clip-path")],
     presets: [preset],
     content: [
         "./app/Filament/**/*.php",
@@ -78,16 +75,11 @@ module.exports = {
         },
 
         extend: {
-            fontFamily: {
-                'Jakarta': ['"Plus Jakarta Sans"','sans-serif'],
-                // 'Loew ': ['"Loew"','sans-serif'],
-
-            },
             backgroundImage: {
-                'who-back':"url('/public/assets/img/home/who/rec.svg')",
-              },
-            content:{
-                'word':'url("/public/assets/img/home/intro/word_bg.svg")',
+                "who-back": "url('/public/assets/img/home/who/rec.svg')",
+            },
+            content: {
+                word: 'url("/public/assets/img/home/intro/word_bg.svg")',
             },
             animation: {
                 "infinite-scroll": "infinite-scroll 25s linear infinite",
@@ -100,13 +92,12 @@ module.exports = {
                 },
                 "fade-in": {
                     from: {
-                      opacity: 0
+                        opacity: 0,
                     },
                     to: {
-                      opacity: 1
-                    }
-                  },
-                
+                        opacity: 1,
+                    },
+                },
             },
             colors: {
                 primary: primary,

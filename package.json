@@ -24,8 +24,6 @@
     "dependencies": {
         "alpinejs": "^3.14.1",
         "aos": "^3.0.0-beta.6",
-        "gasp": "^0.0.2",
-        "gsap": "^3.12.5",
         "taos": "^1.0.5"
     }
 }
