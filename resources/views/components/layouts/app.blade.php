@@ -34,21 +34,7 @@
         <div class="wrapper">
             {{ $slot }}
         </div>
-
-        <div class="relative">
-            <div class="absolute flex flex-col text-center justify-between py-2 md:py-4 w-[90%]    md:w-[792px] md:h-[232px]  top-32 md:top-24 left-1/2 -translate-x-1/2    z-50 bg-gradient-to-r from-[#D22929] to-[#FF4646] rounded-2xl">
-                <h2 class="text-lg md:text-[40px] md:leading-[48px] text-white font-bold">{{__("add3.head")}}</h2>
-                <p class="text-white text-sm md:text-xl md:leading-6 font-normal ">{{__("add3.description1")}}</p>
-                <p class="text-white text-sm md:text-xl md:leading-6 font-normal ">{{__("add3.description2")}}</p>    
-                <a href="/register"
-                    class="mx-auto group relative py-2 px-3 flex-shrink-0 md:px-6 md:py-3  z-10 overflow-hidden rounded-[150px] cursor-pointer w-fit  font-bold text-sm md:text-lg  justify-center items-center text-primary-900 border-primary-800 border-2 bg-white transition-all">
-                    <span> {{__("add3.button")}}</span>
-                </a>
-            
-            </div>
-            <x-home.add3/>    
-            <x-core.footer />
-        </div>
+    
     </div>
 
     @livewireScripts

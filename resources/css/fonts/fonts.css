@@ -31,8 +31,27 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Loew";
+    src: url("./ArbFONTS-Loew-Next-Arabic-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Loew";
+    src: url("./ArbFONTS-Loew-Next-Arabic-Light.woff2") format("woff2");
+    font-weight: light;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 html,
 body {
     font-family: "Alexandria", sans-serif !important;
+}
+footer{
+    font-family: "Loew", sans-serif !important;
 }
