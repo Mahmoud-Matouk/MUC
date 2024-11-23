@@ -8,10 +8,10 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="description" content="{{ $description ?? __('front.description') }}">
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/ico">
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    
-    
+
+
     <title>
         @isset($title)
             {{ $title . ' - ' . config('app.name') }}
@@ -28,13 +28,13 @@
 
 <!-- <body class="bg-[#fcfcfc] "> -->
 
-<body class="bg-[##F2F3FA] z-0 scroll-smooth">
+<body class="bg-[#f2f3fa] z-0 scroll-smooth">
     <div class="flex flex-col min-w-full overflow-hidden">
-        
+
         <div class="wrapper">
             {{ $slot }}
         </div>
-    
+
     </div>
 
     @livewireScripts
