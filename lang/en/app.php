@@ -101,5 +101,7 @@ return [
         'is_home_service' => 'Is Home Service',
         'section' => 'Section',
         'note' => 'Note',
+        'inside_riyadh' => 'Inside Riyadh',
+        'outside_riyadh' => 'Outside Riyadh',
     ],
 ];

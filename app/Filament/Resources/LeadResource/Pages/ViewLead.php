@@ -98,6 +98,40 @@ class ViewLead extends ViewRecord
 
                 Grid::make()->schema([
                     Section::make()
+                        ->columns(2)
+                        ->extraAttributes([
+                            'class' => 'h-full',
+                        ])
+                        ->schema([
+                        TextEntry::make('city')
+                            ->hiddenLabel()
+                            ->color('primary')
+                            ->icon('iconsax-bro-location')
+                            ->size(TextEntry\TextEntrySize::Large)
+                            ->helperText(fn (Lead $record) => $record->email)
+                            ->extraAttributes([
+                                'class' => 'font-bold',
+                            ]),
+
+                        TextEntry::make('message')
+                            ->hiddenLabel()
+                            ->color('primary')
+                            ->icon('iconsax-bro-message')
+                            ->size(TextEntry\TextEntrySize::Large)
+                            ->helperText(fn (Lead $record) => $record->email)
+                            ->extraAttributes([
+                                'class' => 'font-bold',
+                            ]),
+
+                            ImageEntry::make('image')
+                                ->hiddenLabel()
+                                // ->size(66)
+                                ,
+                        ]),
+                ]),
+
+                Grid::make()->schema([
+                    Section::make()
                         ->columns(3)
                         ->extraAttributes([
                             'class' => 'h-full',
