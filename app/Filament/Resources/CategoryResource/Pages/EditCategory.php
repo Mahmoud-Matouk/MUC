@@ -50,6 +50,8 @@ class EditCategory extends EditRecord
 
                         FileUpload::make('icon')
                             ->label(__('app.input.icon'))
+                            ->image()
+                            ->required()
                             ->avatar(),
 
                         // Toggle::make('active')

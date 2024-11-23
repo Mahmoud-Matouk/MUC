@@ -48,7 +48,11 @@ class EditService extends EditRecord
 
                         Select::make('category_id')
                             ->label(__('app.input.category'))
-                            ->relationship('category', 'name'),
+                            ->relationship(
+                                'category',
+                                'name',
+                                fn($query) => $query->where('active', true)
+                            ),
 
                         FileUpload::make('icon')
                             ->label(__('app.input.icon'))

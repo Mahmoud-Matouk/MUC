@@ -15,6 +15,7 @@ use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Textarea;
 use App\Filament\Resources\LeadResource;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
 use Filament\Resources\Pages\CreateRecord;
 use Filament\Resources\Pages\CreateRecord\Concerns\Translatable;
 use Marvinosswald\FilamentInputSelectAffix\TextInputSelectAffix;
@@ -68,39 +69,47 @@ class CreateLead extends CreateRecord
                             ->required()
                             ->maxLength(50),
 
-                        TextInputSelectAffix::make('mobile')
-                                ->label(__('app.input.mobile'))
-                                ->placeholder(__('app.input.mobile'))
-                                ->required()
-                                ->maxLength(11)
-                                ->minLength(8)
-                                ->position('prefix')
-                                ->select(fn() => Select::make('mobile_code')
-                                    ->placeholder('Code')
-                                    ->position('prefix')
-                                    ->required()
-                                    ->extraAttributes([
-                                        'class' => 'w-[78px]',
-                                    ])
-                                    ->options(Country::getMobileCodeCountries())),
+                        TextInput::make('mobile')
+                            ->label(__('app.input.mobile'))
+                            ->placeholder(__('app.input.mobile'))
+                            ->required()
+                            ->maxLength(11)
+                            ->minLength(8)
+                        // ->position('prefix')
+                        // ->select(fn() => Select::make('mobile_code')
+                        //     ->placeholder('Code')
+                        //     ->position('prefix')
+                        //     ->required()
+                        //     ->extraAttributes([
+                        //         'class' => 'w-[78px]',
+                        //     ])
+                        //     ->options(Country::getMobileCodeCountries()))
+                        ,
 
-                        Select::make('category_id')
-                            ->label(__('app.input.category'))
-                            ->placeholder(__('app.input.category'))
-                            ->options(Category::pluck('name', 'id'))
+                        Select::make('city')
+                            ->label(__('app.input.city'))
+                            ->placeholder(__('app.input.city'))
+                            ->options([
+                                'insideRiyadh' => __('app.input.inside_riyadh'),
+                                'outsideRiyadh' => __('app.input.outside_riyadh'),
+                            ])
                             ->required(),
 
                         Select::make('service_id')
                             ->label(__('app.input.service'))
                             ->placeholder(__('app.input.service'))
-                            ->options(Service::pluck('name', 'id'))
+                            ->options(Service::where('active', true)->pluck('name', 'id'))
                             ->required(),
 
-                        Textarea::make('note')
-                            ->label(__('app.input.note'))
-                            ->placeholder(__('app.input.note'))
-                            ->rows(5)
-                            ->columnSpanFull(),
+                        FileUpload::make('image')
+                            ->label(__('app.input.image'))
+                            ->required()
+                            ->image(),
+
+                        Textarea::make('message')
+                            ->label(__('app.input.message'))
+                            ->placeholder(__('app.input.message'))
+                            ->rows(5),
                     ]),
             ]);
     }
