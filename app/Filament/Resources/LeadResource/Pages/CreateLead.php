@@ -90,8 +90,8 @@ class CreateLead extends CreateRecord
                             ->label(__('app.input.city'))
                             ->placeholder(__('app.input.city'))
                             ->options([
-                                'insideRiyadh' => 'داخل الرياض',
-                                'outsideRiyadh' => 'خارج الرياض',
+                                'insideRiyadh' => __('app.input.inside_riyadh'),
+                                'outsideRiyadh' => __('app.input.outside_riyadh'),
                             ])
                             ->required(),
 
@@ -102,6 +102,7 @@ class CreateLead extends CreateRecord
                             ->required(),
 
                         FileUpload::make('image')
+                            ->label(__('app.input.image'))
                             ->required()
                             ->image(),
 

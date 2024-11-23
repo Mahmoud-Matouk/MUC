@@ -24,6 +24,7 @@ class Lead extends Model
     {
         return [
             'status' => LeadStatus::class,
+            'image' => 'string',
 
             'followed_at' => 'datetime',
             'deadline_at' => 'datetime',
@@ -33,7 +34,7 @@ class Lead extends Model
     }
 
     protected array $translatable = [
-        
+
     ];
 
     protected static function booted(): void

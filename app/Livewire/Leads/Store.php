@@ -50,13 +50,13 @@ class Store extends Component implements HasForms
                         TextInput::make('name')
                             ->label(__('app.input.name'))
                             ->placeholder(__('app.input.name'))
-                            ->required()
+                            // ->required()
                             ->maxLength(50),
 
                         TextInput::make('mobile')
                             ->label(__('app.input.mobile'))
                             ->placeholder(__('app.input.mobile'))
-                            ->required()
+                            // ->required()
                             ->maxLength(11)
                             ->minLength(8)
                         // ->position('prefix')
@@ -74,20 +74,29 @@ class Store extends Component implements HasForms
                             ->label(__('app.input.city'))
                             ->placeholder(__('app.input.city'))
                             ->options([
-                                'insideRiyadh' => 'داخل الرياض',
-                                'outsideRiyadh' => 'خارج الرياض',
+                                'insideRiyadh' => __('app.input.inside_riyadh'),
+                                'outsideRiyadh' => __('app.input.outside_riyadh'),
                             ])
-                            ->required(),
+                            // ->required()
+                            ,
 
                         Select::make('service_id')
                             ->label(__('app.input.service'))
                             ->placeholder(__('app.input.service'))
                             ->options(Service::where('active', true)->pluck('name', 'id'))
-                            ->required(),
+                            // ->required()
+                            ,
 
                         FileUpload::make('image')
-                            ->required()
-                            ->image(),
+                            ->label(__('app.input.image'))
+                            ->image()
+                            // ->required()
+                            ,
+
+                        // TextInput::make('image')
+                        //     ->label(__('app.input.image'))
+                        //     ->type('file')
+                        //     ->required(),
 
                         Textarea::make('message')
                             ->label(__('app.input.message'))
@@ -97,7 +106,7 @@ class Store extends Component implements HasForms
 
                     Actions::make([
                         Action::make('submit')
-                            ->label(__('app.reserve'))
+                            ->label(__('app.submit'))
                             ->submit('create')
                             ->color('gray'),
                     ]),
@@ -106,6 +115,12 @@ class Store extends Component implements HasForms
 
     public function create(): void
     {
+        // $this->validate([
+        //     'image' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+        // ]);
+
+        dd($this->form->getState());
+
         Lead::create([
             'name' => $this->name,
             'mobile' => $this->mobile,
@@ -128,6 +143,10 @@ class Store extends Component implements HasForms
 
     public function render()
     {
+        // return view('livewire.leads.store', [
+        //     'image' => $this->image,
+        // ]);
+
         return view('livewire.leads.store');
     }
 }

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string(column: 'mobile');
             $table->string(column: 'city');
             $table->text(column: 'message')->nullable();
-            $table->json(column: 'image')->nullable();
+            $table->string(column: 'image')->nullable();
 
             $table->foreignUlid(column: 'agent_id')->nullable()->constrained(table: 'users')->nullOnDelete();
             $table->foreignUlid(column: 'creator_id')->nullable()->constrained(table: 'users')->nullOnDelete();

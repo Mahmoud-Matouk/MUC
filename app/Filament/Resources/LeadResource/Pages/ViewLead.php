@@ -98,32 +98,61 @@ class ViewLead extends ViewRecord
 
                 Grid::make()->schema([
                     Section::make()
-                        ->columns(3)
+                        ->columns(2)
                         ->extraAttributes([
                             'class' => 'h-full',
                         ])
                         ->schema([
-                            // ImageEntry::make('agent.avatar')
-                            //     ->hiddenLabel()
-                            //     ->circular()
-                            //     ->size(66)
-                            //     ->defaultImageUrl(fn (Lead $record) => $record->agent?->name ? url('/app/avatars/0.svg') : url('/app/fallback/anonymous.png')),
+                        TextEntry::make('city')
+                            ->hiddenLabel()
+                            ->color('primary')
+                            ->icon('iconsax-bro-location')
+                            ->size(TextEntry\TextEntrySize::Large)
+                            ->helperText(fn (Lead $record) => $record->email)
+                            ->extraAttributes([
+                                'class' => 'font-bold',
+                            ]),
 
-                            // TextEntry::make('agent.name')
-                            //     ->hiddenLabel()
-                            //     ->color('primary')
-                            //     ->icon('iconsax-bro-user')
-                            //     ->size(TextEntry\TextEntrySize::Large)
-                            //     ->state(fn (Lead $record) => $record->agent?->name ?? '--')
-                            //     ->helperText(fn (Lead $record) => $record->agent?->email)
-                            //     ->extraAttributes([
-                            //         'class' => 'font-bold',
-                            //     ]),
+                        TextEntry::make('message')
+                            ->hiddenLabel()
+                            ->color('primary')
+                            ->icon('iconsax-bro-message')
+                            ->size(TextEntry\TextEntrySize::Large)
+                            ->helperText(fn (Lead $record) => $record->email)
+                            ->extraAttributes([
+                                'class' => 'font-bold',
+                            ]),
 
                             ImageEntry::make('image')
                                 ->hiddenLabel()
                                 // ->size(66)
                                 ,
+                        ]),
+                ]),
+
+                Grid::make()->schema([
+                    Section::make()
+                        ->columns(3)
+                        ->extraAttributes([
+                            'class' => 'h-full',
+                        ])
+                        ->schema([
+                            ImageEntry::make('agent.avatar')
+                                ->hiddenLabel()
+                                ->circular()
+                                ->size(66)
+                                ->defaultImageUrl(fn (Lead $record) => $record->agent?->name ? url('/app/avatars/0.svg') : url('/app/fallback/anonymous.png')),
+
+                            TextEntry::make('agent.name')
+                                ->hiddenLabel()
+                                ->color('primary')
+                                ->icon('iconsax-bro-user')
+                                ->size(TextEntry\TextEntrySize::Large)
+                                ->state(fn (Lead $record) => $record->agent?->name ?? '--')
+                                ->helperText(fn (Lead $record) => $record->agent?->email)
+                                ->extraAttributes([
+                                    'class' => 'font-bold',
+                                ]),
                         ]),
                 ]),
             ]);

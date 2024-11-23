@@ -97,5 +97,7 @@ return [
         'is_home_service' => 'زيارة منزلية',
         'section' => 'القسم',
         'note' => 'ملاحظات',
+        'inside_riyadh' => 'داخل الرياض',
+        'outside_riyadh' => 'خارج الرياض',
     ],
 ];
