@@ -9,7 +9,7 @@
 --}}
 <x-layouts.app>
     <div class="bg-[#F2F3FA] h-full  w-full relative ">
-         <div class="absolute inset-0 z-0 opacity-[2%]">
+         <div class="absolute inset-0 right-[120px] z-0 opacity-[2%]">
             <img src="{{asset("assets/img/background.svg")}}" alt="background">
          </div>
         <x-core.header />

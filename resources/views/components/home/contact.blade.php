@@ -2,10 +2,10 @@
     <div class="container">
 
         <div class="mb-10 text-xl">
-            <h2 class="inline-block py-2 mb-2 font-bold border border-none text-primary-200">
+            <h2 class="inline-block py-2 mb-2 font-normal text-lg md:text-xl md:leading-[30px] border border-none text-secondary-800">
                 {{ __('front.home.contact.head') }}
             </h2>
-            <h1 class="text-black">{{ __('front.home.contact.caption') }}</h1>
+            <h1 class="text-dark-800 text-xl md:text-[30px] md:leading-[45px] font-semibold ">{{ __('front.home.contact.caption') }}</h1>
         </div>
 
         <div class="grid gap-10 p-10 bg-white md:grid-cols-3 rounded-3xl">
@@ -17,8 +17,9 @@
             <!-- One-column div -->
             <div class="order-first md:col-span-1">
                 <div class="p-5 w-fit">
-                    <img loading="lazy" src="{{ asset('assets/img/home/contact/photo.png') }}" alt="Photo"
-                        class="object-cover w-full rounded-lg h-96">
+                    <video src="{{asset("assets/img/home/contact/video.mp4")}}" class="w-full rounded-lg h-96" autoplay loop></video>
+                    <!-- <img loading="lazy" src="{{ asset('assets/img/home/contact/photo.png') }}" alt="Photo"
+                        class="object-cover w-full rounded-lg h-96"> -->
                 </div>
             </div>
 

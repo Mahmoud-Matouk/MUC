@@ -1,6 +1,6 @@
-<div class="bg-white w-full py-24 pb-10 relative z-30" id="products">
+<div class="bg-white w-full  py-20 relative z-30" id="products">
     <div class="w-full container flex flex-col justify-between">
-        <div class="space-y-2 mx-auto md:w-[560px] text-center">
+        <div class="space-y-2 mx-auto md:w-[590px] text-center">
             <h3 class="text-lg md:text-xl md:leading-[30px] font-normal text-secondary-800">{{__("products.head")}}</h3>
             <h1 class="text-xl md:text-[30px] md:leading-[45px]  font-semibold text-dark-800 ">{{__("products.description")}}</h1>
         </div>
@@ -9,7 +9,7 @@
             @for ($i = 1; $i <= 6; $i++)
                 <div class=" md:col-span-1 flex flex-col items-center justify-between gap-1 p-8  relative rounded-[30px] group  bg-white">
                     <img class="absolute w-[150px] h-[150px] left-[20%] top-[10%] z-0" src="{{asset("assets/img/home/products/Ellipse.png")}}" alt="elipse">
-                    <img class="relative z-10 px-auto  w-[400px]" src="{{asset("assets/img/home/products/image$i.png")}}" alt="image">
+                    <img class="relative z-10 px-auto  w-[400px]" src="{{asset("assets/img/home/products/image$i.webp")}}" alt="image">
                     <h3 class="text-center text-lg text-dark-800 font-semibold">{{__("products.products.product$i.title")}}</h3>
                     
                 </div>

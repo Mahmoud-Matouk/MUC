@@ -1,4 +1,4 @@
-<div class="bg-[#F2F3FA] w-full pt-24 relative z-30" id="services">
+<div class="bg-[#F2F3FA] w-full py-20 relative z-30" id="services">
     <div class="w-full container  ">
         <div class="space-y-2 ">
             <h3 class="text-lg md:text-xl md:leading-[30px] font-normal text-secondary-800">{{__("services.head")}}</h3>
@@ -11,7 +11,7 @@
                     <div
                         class="min-h-[260px] md:col-span-3 flex flex-col items-center justify-between gap-2  rounded-[30px] relative bg-[#0A1138]/[83%]">
                         <img class="absolute  -z-10 inset-0 h-full w-full object-cover rounded-[30px]"
-                            src="{{asset("assets/img/home/services/image.jpg")}}" alt="contact image">
+                            src="{{asset("assets/img/home/services/image-min.webp")}}" alt="contact image">
                         <div class="mx-auto my-auto flex flex-col justify-between gap-2 w-[334px]">
                             <h2 class="text-[30px] leading-[45px] text-white text-center font-semibold">
                                 {{__("services.services.contact")}}</h2>
