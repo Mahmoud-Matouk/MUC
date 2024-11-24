@@ -2,10 +2,10 @@
     <div class="container">
 
         <div class="mb-10 text-xl">
-            <h2 class="inline-block py-2 mb-2 font-normal text-lg md:text-xl md:leading-[30px] border border-none text-secondary-800">
+            <h2 class="inline-block py-2 mb-2 font-normal text-base md:text-lg  border border-none text-secondary-800">
                 {{ __('front.home.contact.head') }}
             </h2>
-            <h1 class="text-dark-800 text-xl md:text-[30px] md:leading-[45px] font-semibold ">{{ __('front.home.contact.caption') }}</h1>
+            <h1 class="text-dark-800 text-lg md:text-xl font-semibold ">{{ __('front.home.contact.caption') }}</h1>
         </div>
 
         <div class="grid gap-10 p-10 bg-white md:grid-cols-3 rounded-3xl">
