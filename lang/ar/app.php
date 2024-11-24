@@ -31,6 +31,7 @@ return [
     'range' => 'النطاق الزمني',
     'since' => 'منذ',
     'reserve' => 'احجز الآن',
+    'send' => 'إرسال الطلب',
 
     'input' => [
         'name' => 'الاسم',
@@ -99,5 +100,7 @@ return [
         'note' => 'ملاحظات',
         'inside_riyadh' => 'داخل الرياض',
         'outside_riyadh' => 'خارج الرياض',
+        'uploadImage' => 'ارفق صورة',
+        'comment' => 'اكتب تعليق',
     ],
 ];

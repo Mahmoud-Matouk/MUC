@@ -52,25 +52,22 @@ class Store extends Component implements HasForms
                         TextInput::make('name')
                             ->label(__('app.input.name'))
                             ->placeholder(__('app.input.name'))
-                            // ->required()
-                            ->maxLength(50),
+                            ->required()
+                            ->minLength(3)
+                            ->maxLength(50)
+                            ->extraInputAttributes([
+                                'class' => 'bg-[#f2f3fa]',
+                            ]),
 
                         TextInput::make('mobile')
                             ->label(__('app.input.mobile'))
                             ->placeholder(__('app.input.mobile'))
-                            // ->required()
+                            ->required()
                             ->maxLength(11)
                             ->minLength(8)
-                        // ->position('prefix')
-                        // ->select(fn() => Select::make('mobile_code')
-                        //     ->placeholder('Code')
-                        //     ->position('prefix')
-                        //     ->required()
-                        //     ->extraAttributes([
-                        //         'class' => 'w-[78px]',
-                        //     ])
-                        //     ->options(Country::getMobileCodeCountries()))
-                        ,
+                            ->extraInputAttributes([
+                                'class' => 'bg-[#f2f3fa]',
+                            ]),
 
                         Select::make('city')
                             ->label(__('app.input.city'))
@@ -79,41 +76,55 @@ class Store extends Component implements HasForms
                                 'insideRiyadh' => __('app.input.inside_riyadh'),
                                 'outsideRiyadh' => __('app.input.outside_riyadh'),
                             ])
-                        // ->required()
-                        ,
+                            ->required()
+                            ->extraInputAttributes([
+                                'class' => 'bg-[#f2f3fa]',
+                            ]),
 
                         Select::make('service_id')
                             ->label(__('app.input.service'))
                             ->placeholder(__('app.input.service'))
                             ->options(Service::where('active', true)->pluck('name', 'id'))
-                        // ->required()
-                        ,
+                            ->required()
+                            ->extraInputAttributes([
+                                'class' => 'bg-[#f2f3fa]',
+                            ]),
 
-                        FileUpload::make('image')
-                            ->label(__('app.input.image'))
+                            FileUpload::make('image')
+                            ->label(__('app.input.uploadImage'))
                             ->image()
-                        // ->required()
-                        ,
-
-                        // TextInput::make('image')
-                        //     ->label(__('app.input.image'))
-                        //     ->type('file')
-                        //     ->required(),
+                            ->required()
+                            ->extraInputAttributes([
+                                'class' => 'bg-[#f1f8fc] py-7 rounded-lg border text-center text-secondary-800 border-secondary-300 cursor-pointer w-full',
+                            ]),
 
                         Textarea::make('message')
-                            ->label(__('app.input.message'))
-                            ->placeholder(__('app.input.message'))
-                            ->rows(5),
+                            ->label(__('app.input.comment'))
+                            ->placeholder(__('app.input.comment'))
+                            ->rows(3)
+                            ->extraInputAttributes([
+                                'class' => 'bg-[#f2f3fa]',
+                            ]),
+                    ])
+                    ->extraAttributes([
+                        'class' => 'border-none shadow-none w-full',
                     ]),
 
                 Actions::make([
                     Action::make('submit')
-                        ->label(__('app.submit'))
+                        ->label(__('app.send'))
                         ->submit('create')
-                        ->color('gray'),
+                        ->color('blue')
+                        ->extraAttributes([
+                            'class' => 'bg-secondary-800 hover:bg-secondary-700 text-white py-2 px-20 text-xs rounded-full transition duration-200',
+                        ]),
+                ])
+                ->extraAttributes([
+                    'class' => 'flex items-end w-full',
                 ]),
             ]);
     }
+
 
     public function create(): void
     {
