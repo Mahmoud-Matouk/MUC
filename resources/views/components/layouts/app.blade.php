@@ -9,7 +9,7 @@
     <meta name="description" content="{{ $description ?? __('front.description') }}">
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/ico">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> --}}
 
 
     <title>
@@ -20,7 +20,7 @@
         @endisset
     </title>
 
-    @livewireStyles
+    @filamentStyles
     @vite('resources/css/app.css')
 
     <x-core.gtm />
@@ -37,7 +37,8 @@
 
     </div>
 
-    @livewireScripts
+    @livewire('notifications')
+    @filamentScripts
     @vite('resources/js/app.js')
 </body>
 

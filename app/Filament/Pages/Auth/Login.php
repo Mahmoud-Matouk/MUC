@@ -60,15 +60,15 @@ class Login extends BaseLogin
 
         $login_type = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
 
-        if ($login_type === 'username') {
-            // TODO: add mobile code to login field.
-            $mobile = full_mobile($login);
+        // if ($login_type === 'username') {
+        //     // TODO: add mobile code to login field.
+        //     $mobile = full_mobile($login);
 
-            if ($mobile && str($mobile)->length() > 11) {
-                $login_type = 'mobile';
-                $login = $mobile;
-            }
-        }
+        //     if ($mobile && str($mobile)->length() > 11) {
+        //         $login_type = 'mobile';
+        //         $login = $mobile;
+        //     }
+        // }
 
         return [
             $login_type => $login,
