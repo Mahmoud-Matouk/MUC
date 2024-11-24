@@ -61,7 +61,8 @@ class AdminPanelProvider extends PanelProvider
                 GoogleFontProvider::class
             )
             ->viteTheme('resources/css/filament/admin/theme.css')
-            ->brandLogo(asset('/assets/img/logo.png'))
+            ->brandLogo(asset('assets/img/logo.svg'))
+            ->favicon(asset('favicon.ico'))
 
             ->pages([
                 \App\Filament\Pages\Admin\Dashboard::class,

@@ -3,10 +3,8 @@
 namespace App\Livewire\Leads;
 
 use App\Models\Lead;
-use App\Models\Country;
 use App\Models\Service;
 use Livewire\Component;
-use App\Models\Category;
 use Filament\Forms\Form;
 use Livewire\WithFileUploads;
 use Filament\Forms\Components\Select;
@@ -19,7 +17,7 @@ use Filament\Notifications\Notification;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Actions\Action;
 use Filament\Forms\Concerns\InteractsWithForms;
-use Marvinosswald\FilamentInputSelectAffix\TextInputSelectAffix;
+use Illuminate\Support\Facades\Log;
 
 class Store extends Component implements HasForms
 {
@@ -90,7 +88,7 @@ class Store extends Component implements HasForms
                                 'class' => 'bg-[#f2f3fa]',
                             ]),
 
-                            FileUpload::make('image')
+                        FileUpload::make('image')
                             ->label(__('app.input.uploadImage'))
                             ->image()
                             ->required()
@@ -128,25 +126,21 @@ class Store extends Component implements HasForms
 
     public function create(): void
     {
-        // $this->validate([
-        //     'image' => 'required|image|mimes:jpg,jpeg,png|max:2048',
-        // ]);
-
-        // dd($this->form->getState());
-        // dd($this->image);
-
+        Log::info($this->form->getState());
         Lead::create([
             'name' => $this->name,
             'mobile' => $this->mobile,
             'city' => $this->city,
             'service_id' => $this->service_id,
-            'image' => $this->image,
+            'image' => $this->form->getState()['image'],
             'message' => $this->message ?? 'No message',
         ]);
 
+
         Notification::make()
+            ->title(title: __('front.input.done'))
             ->success()
-            ->title(title: 'Your message has been sent successfully.')
+            ->color('success')
             ->seconds(seconds: 3)
             ->send();
 
@@ -157,10 +151,6 @@ class Store extends Component implements HasForms
 
     public function render()
     {
-        // return view('livewire.leads.store', [
-        //     'image' => $this->image,
-        // ]);
-
         return view('livewire.leads.store');
     }
 }

@@ -63,12 +63,12 @@ class ListLeads extends ListRecords
                         'service.name',
                     ]),
 
-                TextColumn::make('category.name')
-                    ->label(__('app.input.category'))
-                    ->state(fn (Lead $record) => $record->category->name ?? '--')
-                    ->searchable([
-                        'category.name',
-                    ]),
+                // TextColumn::make('category.name')
+                //     ->label(__('app.input.category'))
+                //     ->state(fn (Lead $record) => $record->category->name ?? '--')
+                //     ->searchable([
+                //         'category.name',
+                //     ]),
 
                 TextColumn::make('status')
                     ->label(__('app.input.status'))
