@@ -4,7 +4,7 @@
     <div class="md:flex w-full h-full relative">
         <div
             class="relative w-3/4 md:w-[621px] md:h-[621px] flex flex-col gap-2  py-6  mx-auto md:my-[100px]  md:mr-[120px]">
-            <div class="text-lg md:text-xl md:leading-[30px] relative font-normal text-white">
+            <div class="text-base md:text-lg  relative font-normal text-white">
                 <img class="absolute   bottom-1/2 translate-y-1/2 text-primary-800"
                     src="{{ asset('assets/img/home/strength/Remotely- 1.svg') }}" alt="word background">
                 {{ __('add.head') }}
