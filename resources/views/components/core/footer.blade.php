@@ -2,7 +2,7 @@
     $links = ['index','products','services','advantages','who', 'contact','terms'];
 @endphp
 
-<footer class="w-full h-full relative   bg-[#162052] border-b-[1px] border-white/20 ">
+<footer class="w-full h-full relative   bg-[#0E83CC] border-b-[1px] border-white/20 ">
     
     <div class="px-4 md:pr-[119px] md:pl-[71px] md:pt-10  bg-transparent">
         <div
@@ -11,7 +11,7 @@
             <div class="lg:col-start-1 lg:col-end-1 md:flex md:flex-col ">
                 <div>
                     <a href="{{ route('index') }}" class="self-start">
-                        <img src="{{asset("assets/img/home/footer/logo.png")}}"
+                        <img src="{{asset("assets/img/home/footer/logo.svg")}}"
                             class="object-contain w-[171px] h-[32px] logo " alt="{{ __('front.title') }}" />
                     </a>
                     <p class="self-start mt-5  md:w-[415px] mb-8 text-xs leading-[25px]  text-justify  font-light  text-white">
@@ -21,17 +21,17 @@
                 <div class="relative z-10 flex items-center justify-start gap-8 social">
 
                     <a href="{{ Config::get('site.social.facebook') }}" target="_blank">
-                        <img src="{{ asset('assets/img/home/footer/facebook.png') }}" alt="facebook icon"
+                        <img src="{{ asset('assets/img/home/footer/facebook.svg') }}" alt="facebook icon"
                             class="w-[35px] h-[35px]" />
                     </a>
 
                     <a href="{{ Config::get('site.social.youtube') }}" target="_blank">
-                        <img src="{{ asset('assets/img/home/footer/youtube.png') }}" alt="youtube icon"
+                        <img src="{{ asset('assets/img/home/footer/youtube.svg') }}" alt="youtube icon"
                             class="w-[35px] h-[35px]" />
                     </a>
 
                     <a href="{{ Config::get('site.social.x') }}" target="_blank">
-                        <img src="{{ asset('assets/img/home/footer/x.png') }}" alt="twitter icon"
+                        <img src="{{ asset('assets/img/home/footer/twitter.svg') }}" alt="twitter icon"
                             class="w-[35px] h-[35px]" />
                     </a>
                 </div>
@@ -85,7 +85,7 @@
 
 </footer>
 
-<div class="bg-[#162052] h-[49px] flex flex-col justify-center">
+<div class="bg-[#0E83CC] h-[49px] flex flex-col justify-center">
     <h2 class="text-center text-[10px] font-normal  text-white">
         {{ __('front.home.footer.rights1') }}
         <span>
