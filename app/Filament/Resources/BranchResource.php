@@ -15,12 +15,13 @@ class BranchResource extends Resource
 
     protected static ?string $navigationIcon = 'iconsax-bro-building-3';
 
-    public static function shouldRegisterNavigation(): bool
+    public static function canAccess(): bool
     {
-        return (bool) auth()->user()?->canAccessBranches();
+        return (bool) false;
+        // return (bool) auth()->user()?->canAccessBranches();
     }
 
-    public static function canAccess(): bool
+    public static function shouldRegisterNavigation(): bool
     {
         return (bool) auth()->user()?->canAccessBranches();
     }

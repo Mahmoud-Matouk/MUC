@@ -43,10 +43,10 @@ class ListServices extends ListRecords
             ->persistFiltersInSession()
             ->modifyQueryUsing(fn (Builder $query) => $query->withTrashed()->latest())
             ->columns([
-                ImageColumn::make('icon')
-                    ->label(__('app.input.icon'))
-                    ->circular()
-                    ->defaultImageUrl(url(config('app.fallback.anonymous'))),
+                // ImageColumn::make('icon')
+                //     ->label(__('app.input.icon'))
+                //     ->circular()
+                //     ->defaultImageUrl(url(config('app.fallback.anonymous'))),
 
                 TextColumn::make('name')
                     ->label(__('app.input.name'))

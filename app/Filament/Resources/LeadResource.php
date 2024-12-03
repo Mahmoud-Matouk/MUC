@@ -16,14 +16,10 @@ class LeadResource extends Resource
 
     protected static ?string $navigationIcon = 'iconsax-bro-people';
 
-    public static function getNavigationBadge(): ?string
+    public static function canAccess(): bool
     {
-        return Lead::count();
-    }
-
-    public static function getNavigationBadgeColor(): string|array|null
-    {
-        return 'primary';
+        return true;
+        // return (bool) auth()->user()?->canAccessLeads();
     }
 
     public static function shouldRegisterNavigation(): bool
@@ -32,10 +28,14 @@ class LeadResource extends Resource
         // return (bool) auth()->user()?->canAccessLeads();
     }
 
-    public static function canAccess(): bool
+    public static function getNavigationBadge(): ?string
     {
-        return true;
-        // return (bool) auth()->user()?->canAccessLeads();
+        return Lead::count();
+    }
+
+    public static function getNavigationBadgeColor(): string|array|null
+    {
+        return 'primary';
     }
 
     public static function getEditUrl($record)

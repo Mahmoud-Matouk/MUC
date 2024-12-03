@@ -16,6 +16,11 @@ class CategoryResource extends Resource
 
     // protected static ?string $navigationGroup = 'Services';
 
+    public static function canAccess(): bool
+    {
+        return (bool) false;
+    }
+    
     public static function getNavigationBadge(): ?string
     {
         return Category::where('active', true)->count();

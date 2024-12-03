@@ -17,7 +17,7 @@ class AnalysisResource extends Resource
 
     public static function canAccess(): bool
     {
-        return (bool) true;
+        return (bool) false;
     }
 
     public static function getNavigationBadge(): ?string

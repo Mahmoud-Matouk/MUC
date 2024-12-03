@@ -19,7 +19,7 @@ class ServiceResource extends Resource
 
     public static function canAccess(): bool
     {
-        return true;
+        return (bool) true;
     }
 
     public static function getNavigationBadge(): ?string

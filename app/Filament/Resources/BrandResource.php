@@ -16,7 +16,8 @@ class BrandResource extends Resource
 
     public static function canAccess(): bool
     {
-        return (bool) app()->environment('production') ? false : true;
+        return (bool) false;
+        // return (bool) app()->environment('production') ? false : true;
     }
 
     public static function getNavigationBadge(): ?string
