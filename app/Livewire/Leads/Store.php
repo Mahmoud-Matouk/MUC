@@ -52,20 +52,14 @@ class Store extends Component implements HasForms
                             ->placeholder(__('app.input.name'))
                             ->required()
                             ->minLength(3)
-                            ->maxLength(50)
-                            ->extraInputAttributes([
-                                'class' => 'bg-[#f2f3fa]',
-                            ]),
+                            ->maxLength(50),
 
                         TextInput::make('mobile')
                             ->label(__('app.input.mobile'))
                             ->placeholder(__('app.input.mobile'))
                             ->required()
                             ->maxLength(11)
-                            ->minLength(8)
-                            ->extraInputAttributes([
-                                'class' => 'bg-[#f2f3fa]',
-                            ]),
+                            ->minLength(8),
 
                         Select::make('city')
                             ->label(__('app.input.city'))
@@ -74,19 +68,13 @@ class Store extends Component implements HasForms
                                 'insideRiyadh' => __('app.input.inside_riyadh'),
                                 'outsideRiyadh' => __('app.input.outside_riyadh'),
                             ])
-                            ->required()
-                            ->extraInputAttributes([
-                                'class' => 'bg-[#f2f3fa]',
-                            ]),
+                            ->required(),
 
                         Select::make('service_id')
                             ->label(__('app.input.service'))
                             ->placeholder(__('app.input.service'))
                             ->options(Service::where('active', true)->pluck('name', 'id'))
-                            ->required()
-                            ->extraInputAttributes([
-                                'class' => 'bg-[#f2f3fa]',
-                            ]),
+                            ->required(),
 
                         FileUpload::make('image')
                             ->label(__('app.input.uploadImage'))
@@ -99,13 +87,7 @@ class Store extends Component implements HasForms
                         Textarea::make('message')
                             ->label(__('app.input.comment'))
                             ->placeholder(__('app.input.comment'))
-                            ->rows(3)
-                            ->extraInputAttributes([
-                                'class' => 'bg-[#f2f3fa]',
-                            ]),
-                    ])
-                    ->extraAttributes([
-                        'class' => 'border-none shadow-none w-full',
+                            ->rows(3),
                     ]),
 
                 Actions::make([
@@ -118,7 +100,7 @@ class Store extends Component implements HasForms
                         ]),
                 ])
                 ->extraAttributes([
-                    'class' => 'flex items-end w-full',
+                    'class' => 'flex items-end',
                 ]),
             ]);
     }

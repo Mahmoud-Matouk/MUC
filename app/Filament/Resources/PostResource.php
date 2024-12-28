@@ -25,12 +25,13 @@ class PostResource extends Resource
         ];
     }
 
-    public static function shouldRegisterNavigation(): bool
+    public static function canAccess(): bool
     {
-        return (bool) auth()->user()?->canAccessPosts();
+        return (bool) false;
+        // return (bool) auth()->user()?->canAccessPosts();
     }
 
-    public static function canAccess(): bool
+    public static function shouldRegisterNavigation(): bool
     {
         return (bool) auth()->user()?->canAccessPosts();
     }

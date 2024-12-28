@@ -58,24 +58,22 @@ class CreateService extends CreateRecord
                         TextInput::make('description')
                             ->label(__('app.input.description'))
                             ->placeholder(__('app.input.description'))
-                            ->required()
                             ->maxLength(150),
 
-                        Select::make('category_id')
-                            ->label(__('app.input.category'))
-                            ->relationship(
-                                'category',
-                                'name',
-                                fn($query) => $query->where('active', true)
-                            ),
+                        // Select::make('category_id')
+                        //     ->label(__('app.input.category'))
+                        //     ->relationship(
+                        //         'category',
+                        //         'name',
+                        //         fn($query) => $query->where('active', true)
+                        //     ),
 
-                        FileUpload::make('icon')
-                            ->label(__('app.input.icon'))
-                            ->image()
-                            ->avatar()
-                            ->required(),
+                        // FileUpload::make('icon')
+                        //     ->label(__('app.input.icon'))
+                        //     ->image()
+                        //     ->avatar()
+                        //     ->required(),
                     ]),
             ]);
     }
-
 }

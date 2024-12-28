@@ -18,7 +18,7 @@ class TeamResource extends Resource
 
     public static function canAccess(): bool
     {
-        return (bool) app()->environment('production') ? false : true;
+        return (bool) false;
     }
 
     public static function getNavigationBadge(): ?string

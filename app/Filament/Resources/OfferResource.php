@@ -15,6 +15,11 @@ class OfferResource extends Resource
 
     // protected static ?string $navigationGroup = 'Services';
 
+    public static function canAccess(): bool
+    {
+        return (bool) false;
+    }
+
     public static function getNavigationBadge(): ?string
     {
         return Offer::where('active',true)->count();

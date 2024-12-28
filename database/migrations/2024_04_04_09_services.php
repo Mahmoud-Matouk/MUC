@@ -22,9 +22,9 @@ return new class extends Migration
         Schema::create(table: 'services', callback: function (Blueprint $table) {
             $table->id()->primary();
             $table->json(column: 'name');
-            $table->json(column: 'description');
-            $table->string(column: 'icon');
-            $table->foreignId(column: 'category_id')->nullable()->constrained(table: 'categories')->nullOnDelete();
+            $table->json(column: 'description')->nullable();
+            // $table->string(column: 'icon');
+            // $table->foreignId(column: 'category_id')->nullable()->constrained(table: 'categories')->nullOnDelete();
             $table->boolean(column: 'active')->default(false);
             $table->timestamps();
             $table->softDeletes();
