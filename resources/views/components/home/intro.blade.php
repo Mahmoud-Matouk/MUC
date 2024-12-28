@@ -1,4 +1,4 @@
-<div class="container bg-[#F2F3FA] w-full pt-16  md:pt-28 ">
+<div class="container bg-[#F2F3FA] w-full pt-16  md:pt-28 pb-10 md:pb-0">
     <div class=" flex   bg-transparent items-center  relative pb-10">
         <div class="relative z-20 flex flex-col gap-2 w-full pb-12  md:w-[600] ">
             <div class="flex flex-col gap-4 pt-6">
@@ -17,9 +17,9 @@
 
             </a>
         </div>
-        <div class="absolute top-0 left-0 z-10 w-full h-full md:opacity-100 opacity-20">
+        <div class="absolute top-0 left-0 z-10 w-full h-full lg:opacity-100 opacity-20">
 
-            <img class="relative  md:w-[700px] h-full mr-auto "
+            <img class="relative lg:w-[550px] xl:w-[700px] h-full mr-auto "
                 src="{{asset("assets/img/home/intro/image.webp")}}" alt="image">
         </div>
     </div>

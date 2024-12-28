@@ -39,7 +39,7 @@
                 @endif
             @endforeach
         </ul>
-        <div class="hidden md:flex items-center  gap-6">
+        <div class="hidden lg:flex items-center  gap-6">
             <div class="relative z-10 flex items-center justify-start gap-8 social">
 
                 <a href="{{ Config::get('site.social.Pinterest') }}" target="_blank">
@@ -47,9 +47,9 @@
                         class="w-6 h-6" />
                 </a>
 
-                <a href="{{ Config::get('site.social.facebook') }}" target="_blank">
-                    <img src="{{ asset('assets/img/home/header/Facebook.svg') }}" alt="Facebook icon"
-                        class="w-6 h-6" />
+                <a href="{{ Config::get('site.social.linkedin') }}" target="_blank">
+                    <img src="{{ asset('assets/img/home/header/linkedin.svg') }}" alt="Facebook icon"
+                        class="w-6 h-6 grayscale" />
                 </a>
 
                 <a href="{{ Config::get('site.social.x') }}" target="_blank">
@@ -60,7 +60,7 @@
             </div>
             
             <a href="#contact"
-            class="py-3 px-[31px] z-10 overflow-hidden rounded-[25px]  font-bold text-sm justify-center items-center text-white
+            class="py-3 px-4 xl:px-[31px] z-10 overflow-hidden rounded-[25px]  font-bold text-sm justify-center items-center text-white
               bg-secondary-800
             ">
             {{__("front.actions.call")}}

@@ -7,7 +7,7 @@
 
         <div class=" w-full grid grid-cols-1 md:grid-cols-3  py-6  gap-4  md:pt-[54px]">
             @for ($i = 1; $i <= 6; $i++)
-                <div class=" md:col-span-1 flex flex-col items-center justify-between gap-1 p-8  relative rounded-[30px] group  bg-white">
+                <div class=" md:col-span-1 flex flex-col items-center justify-between gap-10 p-8  relative rounded-[30px] group  bg-white">
                     <img class="absolute w-[160px] h-[160px] left-[20%] top-[20%] z-0" src="{{asset("assets/img/home/products/Ellipse.png")}}" alt="elipse">
                     <img class="relative z-10 px-auto  w-[400px]" src="{{asset("assets/img/home/products/image$i.webp")}}" alt="image">
                     <h3 class="text-center text-base text-dark-800 font-semibold">{{__("products.products.product$i.title")}}</h3>

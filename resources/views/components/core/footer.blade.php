@@ -20,14 +20,14 @@
                 </div>
                 <div class="relative z-10 flex items-center justify-start gap-8 social">
 
-                    <a href="{{ Config::get('site.social.facebook') }}" target="_blank">
-                        <img src="{{ asset('assets/img/home/footer/facebook.svg') }}" alt="facebook icon"
+                    <a href="{{ Config::get('site.social.Pinterest') }}" target="_blank">
+                        <img src="{{ asset('assets/img/home/footer/pinterest.svg') }}" alt="facebook icon"
                             class="w-[35px] h-[35px]" />
                     </a>
 
-                    <a href="{{ Config::get('site.social.youtube') }}" target="_blank">
-                        <img src="{{ asset('assets/img/home/footer/youtube.svg') }}" alt="youtube icon"
-                            class="w-[35px] h-[35px]" />
+                    <a href="{{ Config::get('site.social.linkedin') }}" target="_blank">
+                        <img src="{{ asset('assets/img/home/footer/linkedin.svg') }}" alt="youtube icon"
+                            class="w-[40px] h-[40px]" />
                     </a>
 
                     <a href="{{ Config::get('site.social.x') }}" target="_blank">

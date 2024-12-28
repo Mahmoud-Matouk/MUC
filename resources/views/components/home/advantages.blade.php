@@ -6,7 +6,7 @@
 
     </div>
     <div class="container flex justify-between  bg-transparent md:flex-nowrap flex-wrap w-full pb-20 relative z-20" >
-        <div class="flex flex-col gap-8 justify-between md:w-[500px] self-center">
+        <div class="flex flex-col gap-8 justify-between md:w-[500px] self-center mt-14 md:mt-0">
             <div class="md:mb-6">
                 <h3 class="text-base md:text-lg  font-normal text-secondary-800">{{__("advantage.title")}}</h3>
                 <h1 class="text-lg md:text-xl font-semibold text-dark-800">{{__("advantage.subtitle")}}</h1>

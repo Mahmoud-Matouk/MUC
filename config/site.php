@@ -9,13 +9,13 @@ return [
 
     'social' => [
         'facebook' => 'https://www.facebook.com/uniform',
-        'x' => 'https://www.x.com/uniform',
+        'x' => 'https://x.com/uniformmix',
         'instagram' => 'https://www.instagram.com/uniform',
-        'linkedin' => 'https://www.linkedin.com/company/uniform',
+        'linkedin' => 'https://sa.linkedin.com/in/uniform-mix-021b89343?trk=profile-badge',
         'youtube' => 'https://www.youtube.com/channel/uniform',
         'snapchat' => 'https://www.snapchat.com/add/uniform',
         'tiktok' => 'https://www.tiktok.com/@uniform',
-        'Pinterest'=>'https://www.pinterest.com/uniform'
+        'Pinterest'=>'https://www.pinterest.com/uniformmix'
     ],
 
     'brand' => [
