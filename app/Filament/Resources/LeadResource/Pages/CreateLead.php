@@ -67,6 +67,7 @@ class CreateLead extends CreateRecord
                             ->label(__('app.input.name'))
                             ->placeholder(__('app.input.name'))
                             ->required()
+                            ->minLength(3)
                             ->maxLength(50),
 
                         TextInput::make('mobile')
@@ -74,18 +75,14 @@ class CreateLead extends CreateRecord
                             ->placeholder(__('app.input.mobile'))
                             ->required()
                             ->maxLength(11)
-                            ->minLength(8)
-                        // ->position('prefix')
-                        // ->select(fn() => Select::make('mobile_code')
-                        //     ->placeholder('Code')
-                        //     ->position('prefix')
-                        //     ->required()
-                        //     ->extraAttributes([
-                        //         'class' => 'w-[78px]',
-                        //     ])
-                        //     ->options(Country::getMobileCodeCountries()))
+                            ->minLength(8),
+                        
+                        TextInput::make('email')
+                        ->label(__('app.input.email'))
+                        ->placeholder(__('app.input.email'))
+                        ->required()
+                        ->email()
                         ,
-
                         Select::make('city')
                             ->label(__('app.input.city'))
                             ->placeholder(__('app.input.city'))
@@ -95,21 +92,27 @@ class CreateLead extends CreateRecord
                             ])
                             ->required(),
 
-                        Select::make('service_id')
+                        Select::make('service.name')
                             ->label(__('app.input.service'))
                             ->placeholder(__('app.input.service'))
-                            ->options(Service::where('active', true)->pluck('name', 'id'))
+                            ->options(Service::active()->pluck('name','id'))
                             ->required(),
-
-                        FileUpload::make('image')
-                            ->label(__('app.input.image'))
+                        
+                            TextInput::make('quantity')
+                            ->numeric()
                             ->required()
-                            ->image(),
-
+                            ->label(__('app.input.quantity'))
+                            ->placeholder(__('app.input.quantity')),
+    
+                        FileUpload::make('image')
+                            ->label(__('app.input.uploadImage'))
+                            ->image()
+                            ->required()
+                            ,
                         Textarea::make('message')
-                            ->label(__('app.input.message'))
-                            ->placeholder(__('app.input.message'))
-                            ->rows(5),
+                            ->label(__('app.input.comment'))
+                            ->placeholder(__('app.input.comment'))
+                            ->rows(3),
                     ]),
             ]);
     }

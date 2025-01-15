@@ -8,12 +8,11 @@
     <div class="container flex justify-between  bg-transparent md:flex-nowrap flex-wrap w-full pb-20 relative z-20" >
         <div class="flex flex-col gap-8 justify-between md:w-[500px] self-center mt-14 md:mt-0">
             <div class="md:mb-6">
-                <h3 class="text-base md:text-lg  font-normal text-secondary-800">{{__("advantage.title")}}</h3>
-                <h1 class="text-lg md:text-xl font-semibold text-dark-800">{{__("advantage.subtitle")}}</h1>
+                <h3 class="text-lg md:text-xl font-semibold text-dark-800">{{__("advantage.subtitle")}}</h3>
             </div>
             <ul class="flex flex-col gap-y-4 md:gap-y-8 ">
-                @for ($i=1;$i<=6;$i++)
-                        
+                @for ($i=1;$i<=4;$i++)
+                    @if($i !== 3)    
                     <li>
                         <div class="flex gap-2 items-center">
                             <div class="w-3 h-[12px] bg-primary-800"></div>
@@ -21,11 +20,27 @@
                         </div>
                         <p class="text-sm md:text-sm text-[#525459] font-normal">{{__("advantage.Adv$i.details")}}</p>
                     </li>
+                    @else
+                    <li>
+                        <div class="flex gap-2 items-center">
+                            <div class="w-3 h-[12px] bg-primary-800"></div>
+                            <h4 class="text-lg md:text-lg text-primary-800 font-semibold">{{__("advantage.Adv$i.title")}}</h4>
+                        </div>
+                        <ul>
+                            @for ($j=1;$j<=4;$j++)
+                                <li class="flex gap-2 items-center pr-6">
+                                <div class="w-3 h-[12px] rounded-full bg-primary-800"></div>
+                                <h4 class="text-lg md:text-lg text-primary-800 font-semibold">{{__("advantage.Adv$i.subtitle$j")}} <span class="text-sm md:text-sm text-[#525459] font-normal"> {{__("advantage.Adv$i.details$j")}}</span></h4>
+                                </li>
+                            @endfor
+                        </ul>
+                    </li>
+                    @endif
                     
                 @endfor
             </ul>
 
-            <a href="#contact" class="block md:w-[293px] mt-6 w-full text-center  py-3  z-10  rounded-[25px]   font-bold text-sm  text-white bg-secondary-800">
+            <a href="#contact" class="block md:w-[293px] mt-6 w-full text-center  py-3  z-10  rounded-[25px]   font-bold text-sm  text-primary-800 bg-secondary-800">
                 {{__("front.actions.order")}}
             </a>
             

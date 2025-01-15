@@ -4,7 +4,7 @@
 
 <footer class="w-full h-full relative   bg-[#0E83CC] border-b-[1px] border-white/20 ">
     
-    <div class="px-4 md:pr-[119px] md:pl-[71px] md:pt-10  bg-transparent">
+    <div class="px-4 pt-10 md:pr-[119px] md:pl-[71px] md:pt-10  bg-transparent">
         <div
             class="grid   md:text-start   grid-cols-1 grid-rows-3 gap-3 md:gap-[5.75rem] md:grid-cols-[2.5fr_1.5fr_1.5fr] md:grid-rows-1 pb-6">
             <!-- First row with 3 columns -->
@@ -14,8 +14,9 @@
                         <img src="{{asset("assets/img/home/footer/logo.svg")}}"
                             class="object-contain w-[171px] h-[32px] logo " alt="{{ __('front.title') }}" />
                     </a>
-                    <p class="self-start mt-5  md:w-[415px] mb-8 text-xs leading-[25px]  text-justify  font-light  text-white">
-                        {{ __('front.description') }}
+                    <h3 class="self-start mt-5  md:w-[415px]  text-base   text-justify  font-semibold  text-primary-700">{{__('front.home.footer.subtitle')}}</h3>
+                    <p class="self-start mt-1  md:w-[415px] mb-8 text-xs leading-[25px]  text-justify  font-light  text-white">
+                        {{ __('front.home.footer.description') }}
                     </p>
                 </div>
                 <div class="relative z-10 flex items-center justify-start gap-8 social">
@@ -68,18 +69,32 @@
                 <h2 class="mb-3 text-base font-bold tracking-[1.5px] text-white ">
                     {{ __('front.home.footer.heads.head_2') }}
                 </h2>
-                
-                <h3 class="mb-4 text-xs font-[500px] tracking-[1px] text-white ">
-                    {{ __('front.home.footer.cap') }}
-                </h3>
+                <button class="flex flex-row  h-8 gap-x-2 cursor-pointer items-center "
+                        onclick="whatsapp({{ Config::get('site.contacts.whats') }})">
+                        <img  src="{{ asset('assets/img/home/footer/whatsapp.svg') }}" alt="whatsapp icon"
+                            class="w-5 my-auto" />
+                        <p dir="ltr"
+                            class="text-[14px] leading-[21px] font-bold  text-white hover:text-primary-400">
+                            {{ Config::get('site.contacts.whats') }}</p>
+                </button>
+                    
+                <button onclick="mailto({{ Config::get('site.contacts.email') }})"
+                        class="flex flex-row  h-8 gap-x-2 cursor-pointer items-center ">
+                        <img src="{{ asset('assets/img/home/footer/mail.svg') }}" alt="Email icon"
+                            class="w-5 my-auto" />
+                        <p class="text-[14px] leading-[21px] font-bold  text-white hover:text-primary-400">
+                            {{ Config::get('site.contacts.email') }}</p>
+                </button>
 
 
 
             </div>
-
         </div>
-
-        <!-- Second row -->
+        
+        <h3 class=" md:col-span-4 mb-3 text-center text-bold text-white text-xl content-center">
+            {{__('front.home.footer.cap2')}}
+        </h3>
+        
     </div>
 
 

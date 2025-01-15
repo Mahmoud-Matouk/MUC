@@ -2,20 +2,20 @@
     <div class="w-full container  ">
         <div class="space-y-2 ">
             <h3 class="text-base md:text-lg  font-normal text-secondary-800">{{__("services.head")}}</h3>
-            <h1 class="text-lg md:text-xl md:w-[65%] font-semibold text-dark-800">{{__("services.description")}}</h1>
+            <h1 class="text-lg md:text-xl md:w-[70%] font-semibold text-dark-800 text-justify">{{__("services.description")}}</h1>
         </div>
 
         <div class=" w-full grid grid-cols-1 md:grid-cols-4  py-6  gap-4  md:py-12">
-            @for ($i = 1; $i <= 6; $i++)
-                @if ($i == 6)
+            @for ($i = 1; $i <= 5; $i++)
+                @if ($i == 5)
                     <div
-                        class="min-h-[200px] md:col-span-3 flex flex-col items-center justify-between gap-2  rounded-[30px] relative bg-[#0A1138]/[83%]">
+                        class="min-h-[200px] md:col-span-4 flex flex-col items-center justify-between gap-2  rounded-[30px] relative bg-[#0A1138]/[83%]">
                         <img class="absolute  -z-10 inset-0 h-full w-full object-cover rounded-[30px]"
                             src="{{asset("assets/img/home/services/image-min.webp")}}" alt="contact image">
                         <div class="mx-auto my-auto flex flex-col justify-between gap-2 ">
                             <h2 class="text-xl text-white text-center font-semibold w-[334px]">
                                 {{__("services.services.contact")}}</h2>
-                            <a href="#contact" class=" py-3 px-[31px] z-10 overflow-hidden rounded-[25px] mx-auto w-[270px] font-bold text-base text-center text-white
+                            <a href="#contact" class=" py-3 px-[31px] z-10 overflow-hidden rounded-[25px] mx-auto w-[270px] font-bold text-base text-center text-primary-800
                                 bg-secondary-800">
                                 {{__("front.actions.call")}}
                             </a>

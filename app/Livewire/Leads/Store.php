@@ -4,6 +4,7 @@ namespace App\Livewire\Leads;
 
 use App\Models\Lead;
 use App\Models\Service;
+use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Filament\Forms\Form;
 use Livewire\WithFileUploads;
@@ -18,6 +19,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Actions\Action;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Illuminate\Support\Facades\Log;
+use phpDocumentor\Reflection\Types\Integer;
 
 class Store extends Component implements HasForms
 {
@@ -27,9 +29,15 @@ class Store extends Component implements HasForms
     public ?string $name;
     public ?string $mobile;
     public ?string $city;
-    public ?string $service_id;
     public ?array $image;
     public ?string $message;
+
+    #[Validate('email')]
+    public ?string $email;
+
+    public ?string $service_id;
+
+    public  $quantity;
 
     public function mount(): void
     {
@@ -60,7 +68,13 @@ class Store extends Component implements HasForms
                             ->required()
                             ->maxLength(11)
                             ->minLength(8),
-
+                        
+                        TextInput::make('email')
+                        ->label(__('app.input.email'))
+                        ->placeholder(__('app.input.email'))
+                        ->required()
+                        ->email()
+                        ,
                         Select::make('city')
                             ->label(__('app.input.city'))
                             ->placeholder(__('app.input.city'))
@@ -73,9 +87,15 @@ class Store extends Component implements HasForms
                         Select::make('service_id')
                             ->label(__('app.input.service'))
                             ->placeholder(__('app.input.service'))
-                            ->options(Service::where('active', true)->pluck('name', 'id'))
+                            ->options(Service::active()->pluck('name','id'))
                             ->required(),
-
+                        
+                            TextInput::make('quantity')
+                            ->numeric()
+                            ->required()
+                            ->label(__('app.input.quantity'))
+                            ->placeholder(__('app.input.quantity')),
+    
                         FileUpload::make('image')
                             ->label(__('app.input.uploadImage'))
                             ->image()
@@ -83,7 +103,6 @@ class Store extends Component implements HasForms
                             ->extraInputAttributes([
                                 'class' => 'bg-[#f1f8fc] py-7 rounded-lg border text-center text-secondary-800 border-secondary-300 cursor-pointer w-full',
                             ]),
-
                         Textarea::make('message')
                             ->label(__('app.input.comment'))
                             ->placeholder(__('app.input.comment'))
@@ -96,7 +115,7 @@ class Store extends Component implements HasForms
                         ->submit('create')
                         ->color('blue')
                         ->extraAttributes([
-                            'class' => 'bg-secondary-800 hover:bg-secondary-700 text-white py-2 px-20 text-xs rounded-full transition duration-200',
+                            'class' => 'bg-secondary-800 hover:bg-secondary-700 text-primary-800 py-2 px-20 text-xs rounded-full transition duration-200',
                         ]),
                 ])
                 ->extraAttributes([
@@ -113,6 +132,8 @@ class Store extends Component implements HasForms
             'name' => $this->name,
             'mobile' => $this->mobile,
             'city' => $this->city,
+            'quantity'=>$this->quantity,
+            'email'=>$this->email,
             'service_id' => $this->service_id,
             'image' => $this->form->getState()['image'],
             'message' => $this->message ?? 'No message',

@@ -76,4 +76,9 @@ class CreateService extends CreateRecord
                     ]),
             ]);
     }
+
+    public function mutateFormDataBeforeCreate(array $data): array{
+        $data['icon']='iconoir-magic-wand';
+        return $data;
+    }
 }

@@ -1,9 +1,9 @@
 <?php
 return [
     'contacts' => [
-        'whats' => '5234567890',
-        'mobile' => '5234567890',
-        'email' => 'contact@uniform.com',
+        'whats' => '0549280743',
+        'mobile' => '0549280743',
+        'email' => 'info@uniformmix.com',
         'location' => 'https://goo.gl/maps/1',
     ],
 

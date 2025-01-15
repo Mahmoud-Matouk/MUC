@@ -127,6 +127,11 @@ class ViewLead extends ViewRecord
                                 ->hiddenLabel()
                                 // ->size(66)
                                 ,
+                            TextEntry::make('service.name')
+                            ->hiddenLabel()
+                            ->color('primary')
+                            ->size(TextEntry\TextEntrySize::Large)
+                            ,
                         ]),
                 ]),
 

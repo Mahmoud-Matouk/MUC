@@ -16,7 +16,7 @@
             
             @endfor
         </div>
-        <a href="#contact" class="self-center py-3 px-[31px] z-10 overflow-hidden rounded-[25px] w-[293px] text-center  font-bold text-sm  text-white
+        <a href="#contact" class="self-center py-3 px-[31px] z-10 overflow-hidden rounded-[25px] w-[293px] text-center  font-bold text-sm  text-primary-800
             bg-secondary-800">
             {{__("front.actions.order")}}
         </a>

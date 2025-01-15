@@ -49,8 +49,7 @@ class ListLeads extends ListRecords
                     ]),
 
                 // TextColumn::make('email')
-                //     ->label(__('app.input.contacts'))
-                //     ->description(fn ($record) => $record->mobile)
+                //     ->label(__('app.input.email'))
                 //     ->copyable()
                 //     ->searchable([
                 //         'email',
@@ -58,7 +57,6 @@ class ListLeads extends ListRecords
 
                 TextColumn::make('service.name')
                     ->label(__('app.input.service'))
-                    ->state(fn (Lead $record) => $record->service->name ?? '--')
                     ->searchable([
                         'service.name',
                     ]),

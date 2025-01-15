@@ -2,15 +2,15 @@
     <div class=" flex   bg-transparent items-center  relative pb-10">
         <div class="relative z-20 flex flex-col gap-2 w-full pb-12  md:w-[600] ">
             <div class="flex flex-col gap-4 pt-6">
-                <h2 class="text-xl  md:text-5xl md:leading-[65px] font-semibold text-primary-800">
+                <h2 class="text-xl  md:text-2xl md:leading-[65px] font-semibold text-primary-800">
                     {{__("front.home.intro.head")}}</h2>
-                <h2 class="text-xl md:text-5xl md:leading-[65px] font-semibold text-dark-800">
+                <h2 class="text-xl md:text-2xl md:leading-[65px] font-semibold text-dark-800">
                     {{__("front.home.intro.captions.caption1")}}</h2>
 
             </div>
-            <p class="my-4 text-xs  md:text-sm   font-normal text-dark-500 md:w-[430px]">
+            <p class="my-4 text-xs  md:text-sm   font-normal text-dark-500 md:w-[430px] text-justify">
                 {{__("front.home.intro.captions.caption2")}}</p>
-            <a href="#contact" class="py-3 px-[31px] z-10 overflow-hidden rounded-[25px] self-start  font-bold text-xs md:text-base justify-center items-center text-white
+            <a href="#contact" class="py-3 px-[31px] z-10 overflow-hidden rounded-[25px] self-start  font-bold text-xs md:text-base justify-center items-center text-primary-800
             bg-secondary-800
         ">
                 {{__("front.actions.call")}}

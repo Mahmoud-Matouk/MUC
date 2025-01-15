@@ -15,7 +15,8 @@ return new class extends Migration
             $table->string('status')->index()->default(LeadStatus::New);
             $table->foreignId(column: 'service_id')->nullable()->constrained(table: 'services')->nullOnDelete();
             $table->foreignId(column: 'category_id')->nullable()->constrained(table: 'categories')->nullOnDelete();
-
+            
+            
             $table->string(column: 'name')->index();
             // $table->string(column: 'mobile_code');
             $table->string(column: 'mobile');
