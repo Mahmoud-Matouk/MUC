@@ -15,7 +15,7 @@
                     @if($i !== 3)    
                     <li>
                         <div class="flex gap-2 items-center">
-                            <div class="w-3 h-[12px] bg-secondary-800"></div>
+                            <div class="flex-shrink-0 w-3 h-[12px] bg-secondary-800"></div>
                             <h4 class="text-lg md:text-lg text-secondary-800 font-semibold">{{__("advantage.Adv$i.title")}}</h4>
                         </div>
                         <p class="mr-5 text-sm md:text-sm text-[#525459] font-normal">{{__("advantage.Adv$i.details")}}</p>
