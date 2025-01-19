@@ -15,22 +15,22 @@
                     @if($i !== 3)    
                     <li>
                         <div class="flex gap-2 items-center">
-                            <div class="w-3 h-[12px] bg-primary-800"></div>
-                            <h4 class="text-lg md:text-lg text-primary-800 font-semibold">{{__("advantage.Adv$i.title")}}</h4>
+                            <div class="w-3 h-[12px] bg-secondary-800"></div>
+                            <h4 class="text-lg md:text-lg text-secondary-800 font-semibold">{{__("advantage.Adv$i.title")}}</h4>
                         </div>
-                        <p class="text-sm md:text-sm text-[#525459] font-normal">{{__("advantage.Adv$i.details")}}</p>
+                        <p class="mr-5 text-sm md:text-sm text-[#525459] font-normal">{{__("advantage.Adv$i.details")}}</p>
                     </li>
                     @else
                     <li>
                         <div class="flex gap-2 items-center">
-                            <div class="w-3 h-[12px] bg-primary-800"></div>
-                            <h4 class="text-lg md:text-lg text-primary-800 font-semibold">{{__("advantage.Adv$i.title")}}</h4>
+                            <div class="w-3 h-[12px] bg-secondary-800"></div>
+                            <h4 class="text-lg md:text-lg text-secondary-800 font-semibold">{{__("advantage.Adv$i.title")}}</h4>
                         </div>
-                        <ul>
+                        <ul class="space-y-1 md:space-y-2">
                             @for ($j=1;$j<=4;$j++)
                                 <li class="flex gap-2 items-center pr-6">
-                                <div class="w-3 h-[12px] rounded-full bg-primary-800"></div>
-                                <h4 class="text-lg md:text-lg text-primary-800 font-semibold">{{__("advantage.Adv$i.subtitle$j")}} <span class="text-sm md:text-sm text-[#525459] font-normal"> {{__("advantage.Adv$i.details$j")}}</span></h4>
+                                <div class="w-3 h-[12px] rounded-full bg-secondary-800"></div>
+                                <h4 class="text-lg md:text-lg text-secondary-800 font-semibold">{{__("advantage.Adv$i.subtitle$j")}} <span class="text-sm md:text-sm text-[#525459] font-normal"> {{__("advantage.Adv$i.details$j")}}</span></h4>
                                 </li>
                             @endfor
                         </ul>
@@ -40,7 +40,7 @@
                 @endfor
             </ul>
 
-            <a href="#contact" class="block md:w-[293px] mt-6 w-full text-center  py-3  z-10  rounded-[25px]   font-bold text-sm  text-primary-800 bg-secondary-800">
+            <a href="#contact" class="block md:w-[293px] mt-6 w-full text-center  py-3  z-10  rounded-[25px]   font-bold text-sm  text-white bg-primary-800">
                 {{__("front.actions.order")}}
             </a>
             

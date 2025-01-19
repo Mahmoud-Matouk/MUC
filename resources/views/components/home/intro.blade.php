@@ -8,10 +8,10 @@
                     {{__("front.home.intro.captions.caption1")}}</h2>
 
             </div>
-            <p class="my-4 text-xs  md:text-sm   font-normal text-dark-500 md:w-[430px] text-justify">
+            <p class="my-4 text-xs leading-6 md:text-sm md:leading-7   font-normal text-dark-500 md:w-[430px] text-justify">
                 {{__("front.home.intro.captions.caption2")}}</p>
-            <a href="#contact" class="py-3 px-[31px] z-10 overflow-hidden rounded-[25px] self-start  font-bold text-xs md:text-base justify-center items-center text-primary-800
-            bg-secondary-800
+            <a href="#contact" class="py-3 px-[31px] z-10 overflow-hidden rounded-[25px] self-start  font-bold text-xs md:text-base justify-center items-center text-white
+            bg-primary-800
         ">
                 {{__("front.actions.call")}}
 

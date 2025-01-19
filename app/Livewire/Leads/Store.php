@@ -115,7 +115,7 @@ class Store extends Component implements HasForms
                         ->submit('create')
                         ->color('blue')
                         ->extraAttributes([
-                            'class' => 'bg-secondary-800 hover:bg-secondary-700 text-primary-800 py-2 px-20 text-xs rounded-full transition duration-200',
+                            'class' => 'bg-primary-800 hover:bg-primary-700 text-white py-2 px-20 text-xs rounded-full transition duration-200',
                         ]),
                 ])
                 ->extraAttributes([
