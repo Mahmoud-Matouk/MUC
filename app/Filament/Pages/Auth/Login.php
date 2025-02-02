@@ -48,8 +48,8 @@ class Login extends BaseLogin
             ->outlined()
             ->action(function ($livewire) {
                 $livewire->form->fill([
-                    'login' => 'osama',
-                    'password' => '6532100Cs',
+                    'login' => 'admin',
+                    'password' => 'admin',
                 ]);
             })->hidden(app()->environment('production'));
     }

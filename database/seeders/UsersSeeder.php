@@ -20,7 +20,7 @@ class UsersSeeder extends Seeder
             'locale_mobile' => '0553203604',
             'email' => 'admin@muc.net',
             'username' => 'admin',
-            'avatar' => $this->addAvatar('0.jpg'),
+            'avatar' => $this->addAvatar('0.png'),
             'password' => bcrypt(value: 'admin'),
         ])->assignRole(
             Role::Admin,
