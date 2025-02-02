@@ -40,4 +40,9 @@ class HomeController extends Controller
 
         return view('analysis', compact([ 'analysis']));
     }
+
+    public function homeLogin()
+    {
+        return view('livewire.login.homeLogin');
+    }
 }

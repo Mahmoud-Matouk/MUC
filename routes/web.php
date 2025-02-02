@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Models\Offer;
+use App\Livewire\Login\HomeLogin;
+use App\Livewire\Login\HomeRegister;
 
 Route::localized(function () {
     Route::controller(HomeController::class)->group(function () {
@@ -17,12 +19,13 @@ Route::localized(function () {
         // Route::get('/contact', 'contact')->name('contact');
 
     });
-   
+
     // Route::controller(RegisterController::class)->group(function () {
     //     Route::get('/register', 'index')->name('register-index');
-
     //     Route::get('/register/{registration}', 'follow')->name('register-follow');
     // });
+
+    // Route::get('/homeLogin', 'homeLogin')->name('homeLogin');
 
     Route::get('/packages/{id}', function ($id) {
         $package = Bundle::findOrFail($id);
@@ -44,6 +47,9 @@ Route::controller(PostController::class)->group(function () {
     Route::get('/blog/{slug}', 'show')->name('post');
     // Route::get('/blog/author/{author:username}', 'author')->name('author');
 });
+
+
+// Route::get('/home-register', HomeRegister::class)->name('home-register');
 
 Route::get('/login', function () {
     return redirect(route('filament.admin.auth.login'));

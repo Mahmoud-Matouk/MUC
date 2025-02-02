@@ -106,5 +106,10 @@ return [
         'note' => 'Note',
         'inside_riyadh' => 'Inside Riyadh',
         'outside_riyadh' => 'Outside Riyadh',
+        'hearing_loss' => 'Hearing Loss',
+        'partial' => 'Partial',
+        'complete' => 'Complete',
+        'age' => 'age',
+        'confirm_password' => 'Confirm Password',
     ],
 ];

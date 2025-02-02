@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Leads;
+namespace App\Livewire\Login;
 
 use App\Models\Lead;
 use App\Models\Service;
@@ -21,7 +21,7 @@ use Filament\Forms\Concerns\InteractsWithForms;
 use Illuminate\Support\Facades\Log;
 use phpDocumentor\Reflection\Types\Integer;
 
-class Store extends Component implements HasForms
+class HomeLogin extends Component implements HasForms
 {
     use InteractsWithForms;
     use WithFileUploads;
@@ -62,46 +62,6 @@ class Store extends Component implements HasForms
                             ->minLength(3)
                             ->maxLength(50),
 
-                        TextInput::make('email')
-                            ->label(__('app.input.email'))
-                            ->placeholder(__('app.input.email'))
-                            ->required()
-                            ->email(),
-
-                            TextInput::make('password')
-                                ->label(__('app.input.password'))
-                                ->placeholder(__('app.input.password'))
-                                ->password()
-                                ->required()
-                                ->minLength(8)
-                                ->maxLength(32)
-                                ->rules(['regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/'])
-                                ->confirmed()
-                                ->suffixIcon(function ($get) {
-                                    return $get('showPassword') ? 'heroicon-s-eye-slash' : 'heroicon-s-eye';
-                                })
-                                ->suffixIconColor('primary')
-                                ->extraAttributes([
-                                    'x-data' => '{ showPassword: false }',
-                                    'x-on:click' => 'showPassword = !showPassword',
-                                    ':type' => 'showPassword ? "text" : "password"',
-                                ]),
-
-                            TextInput::make('confirm_password')
-                                ->label(__('app.input.confirm_password'))
-                                ->placeholder(__('app.input.confirm_password'))
-                                ->password() // Masks the input by default
-                                ->required()
-                                ->minLength(8)
-                                ->maxLength(32)
-                                ->suffixIcon('heroicon-s-eye') // Default icon (eye)
-                                ->suffixIconColor('primary')
-                                ->extraAttributes([
-                                    'x-data' => '{ showPassword: false }',
-                                    'x-on:click' => 'showPassword = !showPassword',
-                                    ':type' => 'showPassword ? "text" : "password"',
-                                ]),
-
                         TextInput::make('mobile')
                             ->label(__('app.input.mobile'))
                             ->placeholder(__('app.input.mobile'))
@@ -109,25 +69,49 @@ class Store extends Component implements HasForms
                             ->maxLength(11)
                             ->minLength(8),
 
-                        Select::make('hearing_loss')
-                            ->label(__('app.input.hearing_loss'))
-                            ->placeholder(__('app.input.hearing_loss'))
-                            ->required()
+                        TextInput::make('email')
+                        ->label(__('app.input.email'))
+                        ->placeholder(__('app.input.email'))
+                        ->required()
+                        ->email()
+                        ,
+                        Select::make('city')
+                            ->label(__('app.input.city'))
+                            ->placeholder(__('app.input.city'))
                             ->options([
-                                'partial' => __('app.input.partial'),
-                                'complete' => __('app.input.complete'),
-                            ]),
-
-                            TextInput::make('age')
-                            ->label(__('app.input.age'))
-                            ->placeholder(__('app.input.age'))
-                            ->numeric()
+                                'insideRiyadh' => __('app.input.inside_riyadh'),
+                                'outsideRiyadh' => __('app.input.outside_riyadh'),
+                            ])
                             ->required(),
+
+                        Select::make('service_id')
+                            ->label(__('app.input.service'))
+                            ->placeholder(__('app.input.service'))
+                            ->options(Service::active()->pluck('name','id'))
+                            ->required(),
+
+                            TextInput::make('quantity')
+                            ->numeric()
+                            ->required()
+                            ->label(__('app.input.quantity'))
+                            ->placeholder(__('app.input.quantity')),
+
+                        FileUpload::make('image')
+                            ->label(__('app.input.uploadImage'))
+                            ->image()
+                            ->required()
+                            ->extraInputAttributes([
+                                'class' => 'bg-[#f1f8fc] py-7 rounded-lg border text-center text-secondary-800 border-secondary-300 cursor-pointer w-full',
+                            ]),
+                        Textarea::make('message')
+                            ->label(__('app.input.comment'))
+                            ->placeholder(__('app.input.comment'))
+                            ->rows(3),
                     ]),
 
                 Actions::make([
                     Action::make('submit')
-                        ->label(__('front.input.register'))
+                        ->label(__('app.send'))
                         ->submit('create')
                         ->color('blue')
                         ->extraAttributes([
@@ -170,6 +154,6 @@ class Store extends Component implements HasForms
 
     public function render()
     {
-        return view('livewire.leads.store');
+        return view('livewire.login.homeLogin');
     }
 }

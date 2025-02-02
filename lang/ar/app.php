@@ -36,8 +36,8 @@ return [
     'input' => [
         'name' => 'الاسم',
         'email' => 'البريد الإلكتروني',
-        'mobile' => 'الجوال',
-        'mobile_code' => 'كود الجوال',
+        'mobile' => 'الهاتف',
+        'mobile_code' => 'كود الهاتف',
         'username' => 'إسم المستخدم',
         'login_field' => 'البريدي الإلكتروني أو إسم المستخدم',
         'full_name' => 'الاسم الكامل',
@@ -103,5 +103,10 @@ return [
         'outside_riyadh' => 'خارج الرياض',
         'uploadImage' => 'ارفق صورة',
         'comment' => 'اكتب تعليق',
+        'hearing_loss' => 'مستوي السمع',
+        'partial' => 'جزئي',
+        'complete' => 'كٌلي',
+        'age' => 'السن',
+        'confirm_password' => 'تأكيد كلمه المرور',
     ],
 ];
