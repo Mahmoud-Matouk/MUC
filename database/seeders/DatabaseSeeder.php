@@ -13,8 +13,8 @@ class DatabaseSeeder extends Seeder
         $this->call(CountriesSeeder::class);
         $this->call(TagSeeder::class);
         // $this->call(PostSeeder::class);
-        $this->call(CategorySeeder::class);
-        $this->call(ServiceSeeder::class);
+        // $this->call(CategorySeeder::class);
+        // $this->call(ServiceSeeder::class);
         // $this->call(TeamSeeder::class);
         // $this->call(OfferSeeder::class);
         // $this->call(ImprovementSeeder::class);

@@ -14,29 +14,14 @@ class UsersSeeder extends Seeder
         User::create([
             'gender' => 1,
             'locale' => 'en',
-            'name' => 'Osama Kamel',
-            'mobile_code' => '966',
-            'mobile' => '966553203604',
+            'name' => 'Admin',
+            'mobile_code' => '20',
+            'mobile' => '201146263393',
             'locale_mobile' => '0553203604',
-            'email' => 'osama@prameg.net',
-            'username' => 'osama',
-            'avatar' => $this->addAvatar('osama.jpg'),
-            'password' => bcrypt(value: '6532100Cs'),
-        ])->assignRole(
-            Role::Admin,
-        );
-
-        User::create([
-            'gender' => 1,
-            'locale' => 'en',
-            'name' => 'Said Omar',
-            'mobile_code' => '966',
-            'mobile' => '966551113604',
-            'locale_mobile' => '0551113604',
-            'email' => 'said@prameg.net',
-            'username' => 'said',
-            'avatar' => $this->addAvatar('0.png'),
-            'password' => bcrypt(value: '653210Cs'),
+            'email' => 'admin@muc.net',
+            'username' => 'admin',
+            'avatar' => $this->addAvatar('0.jpg'),
+            'password' => bcrypt(value: 'admin'),
         ])->assignRole(
             Role::Admin,
         );
